@@ -1,0 +1,135 @@
+<div class="mce-toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#mcetoc_1euqqp1f00">Dia 2: Strings</a></li>
+<li><a href="#mcetoc_1epr2epkn14f">Strings</a>
+<ul>
+<li><a href="#mcetoc_1epr2epkn14h">Indexação e Fatiamento</a>
+<ul>
+<li><a href="#mcetoc_1esrmp0l8p">Índices:</a></li>
+<li><a href="#mcetoc_1esrmp0l8q">Fatiamento</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1epr2epkn14i">Métodos de Strings</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p> </p>
+<h1 id="mcetoc_1euqqp1f00">Dia 2: Strings</h1>
+<p class="page-title" style="font-family: sans-serif;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><br/>Olá, desenvolvedores! O nosso conteúdo do dia englobará algumas das estruturas fundamentais do Python, as strings. Esperamos que vocês possam tirar o máximo possível de proveito do conteúdo que estamos disponibilizando, não esqueçam de praticar bastante para fixar bem.</span></p>
+<h1 class="page-title" id="mcetoc_1epr2epkn14f" style="font-family: sans-serif;">Strings</h1>
+<p style="font-family: sans-serif;">Um objeto string em Python tem informações de caracteres e pode conter qualquer número de caracteres, inclusive zero. Muitas vezes você verá esse tipo de dado abreviado como <em>str</em>.</p>
+<p style="font-family: sans-serif;">As strings são indicadas usando aspas simples, aspas duplas ou aspas triplas. As aspas simples são utilizadas para maioria dos casos. Se quisermos inserir aspas simples dentro da string, teremos duas alternativas, a primeira alternativa é usar o operador de escape <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="font-family: terminal, monaco, monospace; color: #ba372a; background-color: #ced4d9;">\</span> antes das aspas, e a segunda alternativa é envolver sua string com aspas duplas. O mesmo vale para strings que contém aspas duplas, precisamos ou anular esse caractere com o operador de escape <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9; font-family: terminal, monaco, monospace;">\</span> ou envolver a string com aspas simples. As aspas triplas são usadas para strings longas que podem se estender por várias linhas. O tipo de aspa usada no final da string deve corresponder ao tipo de aspa do começo.</p>
+<p style="font-family: sans-serif;">As aspas simples podem conter aspas duplas dentro delas, e vice-versa. Aqui vai alguns exemplos.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>my_name = 'Kenzie' # single-quoted string
+mixed_quote = "Kenzie won't let me down" # double-quoted string with single embedded quote
+multi_line = """Red sky at night:
+sailor's delight. Red sky at morning:
+sailor's warning."""
+escaped_string = 'Here\'s looking at you, kid'
+empty_string = ''</code></pre>
+<p style="font-family: sans-serif;"> </p>
+<h2 id="mcetoc_1epr2epkn14h" style="font-family: sans-serif;">Indexação e Fatiamento</h2>
+<p style="font-family: sans-serif;">As strings são consideradas <em>listas</em> em Python, e, portanto, os caracteres dentro delas podem ser acessados via índice ou <em>fatiamento</em>.</p>
+<h3 id="mcetoc_1esrmp0l8p" style="font-family: sans-serif;">Índices:</h3>
+<p style="font-family: sans-serif;">Para acessar um caractere em uma posição específica dentro de uma string, coloque um inteiro que representa a posição do caractere entre colchetes, <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9; font-family: terminal, monaco, monospace;"><code>[]</code></span>.</p>
+<p style="font-family: sans-serif;">Os números positivos começam pela esquerda, pelo 0, e os números negativos começam pela direita, pelo -1.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>s = "some string"
+s[0] # s
+s[3] # e
+s[-1] # g</code></pre>
+<h3 id="mcetoc_1esrmp0l8q" style="font-family: sans-serif;">Fatiamento</h3>
+<p style="font-family: sans-serif;">Para acessar grupos de caracteres dentro de uma string, chamados <em>fatias</em>, use dois pontos (<code>:</code>) para separar a posição inicial da posição final. A sintaxe se parece com isso <code>string[start:stop:step]</code>, onde <em>start</em>, <em>stop</em> e <em>step</em> são inteiros.</p>
+<ul style="font-family: sans-serif;">
+<li>A posição <em>start</em> está inclusa na fatia resultante.</li>
+<li>A posição <em>stop</em> <strong>não</strong> está inclusa na fatia resultante.</li>
+<li>O valor de <em>step</em> indica quantos caracteres devem ser pulados por vez.</li>
+<li>Todos os valores são opcionais, desde que seja incluído um dois pontos para representar a operação de fatiamento.</li>
+</ul>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>s = "some string"
+s[0:4] # valores de start e stop explícitos: 'some'
+s[5:11:2] # inclui um valor step -- fatia a cada duas posições da posição 5 até a posição 11: 'srn'
+s[:4] # omite o valor para start -- o valor 0 fica implícito por default: 'some'
+s[5:] # omite o valor para stop -- a última posição da string fica implícita por default 'string'
+s[:] # omitir o valor para start, stop e step 'some string'</code></pre>
+<p style="font-family: sans-serif;">Você pode usar até mesmo valores negativos para criar fatias interessantes.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>s = "some string"
+s[-6:]  # inicia 6 caracteres antes do caractere final: 'string'
+s[:-7]  # para o fatiamento 7 caracteres antes do caractere final:'some'
+s[::-1]  # inverte a string: 'gnirts emos'</code></pre>
+<h2 id="mcetoc_1epr2epkn14i" style="font-family: sans-serif;">Métodos de Strings</h2>
+<p style="font-family: sans-serif;">Vamos explorar alguns métodos incorporados que vem com cada objeto string.</p>
+<p style="font-family: sans-serif;"><code>capitalize()</code> - muda o primeiro caractere da string para maiúsculo</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.capitalize()
+'Some string'</code></pre>
+<p style="font-family: sans-serif;"><code>count()</code> - retorna o número de ocorrências de uma determinada sub-string da string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string for me"
+&gt;&gt;&gt; s.count("me")
+2</code></pre>
+<p style="font-family: sans-serif;"><code>endswith()</code> - informa se a string termina com uma determinada sub-string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.endswith("ing")
+True</code></pre>
+<p style="font-family: sans-serif;"><code>find()</code> - retorna o primeiro índice de onde uma determinada sub-string é encontrada dentro da string (retorna -1 se não encontrar nada)</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.find("me")
+2
+&gt;&gt;&gt; s.find("x")
+-1</code></pre>
+<p style="font-family: sans-serif;"><code>index()</code> - o mesmo que <code>find()</code>, mas retorna uma exceção ValueError caso a sub-string não seja encontrada</p>
+<p style="font-family: sans-serif;"><code>isalpha()</code>, <code>isdigit()</code>, <code>isspace ()</code> - informa se a string satisfaz os critérios de alfanumérico, número e espaço</p>
+<p style="font-family: sans-serif;">Há um monte desses tipos de métodos que verificam as características de uma string. Digite <code>dir(str)</code> no REPL para consultá-los.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.isalpha() # retorna False por conta do espaço
+False</code></pre>
+<p style="font-family: sans-serif;"><code>join()</code> - insere a string entre cada item de um determinado dado iterável</p>
+<p style="font-family: sans-serif;">Este método é frequentemente usado anexado diretamente a uma string literal para ser usado como um separador para outros dados.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "xyz"
+&gt;&gt;&gt; ".".join(s) # put dots in between each letter of s
+'x.y.z'</code></pre>
+<p style="font-family: sans-serif;"><code>lower()</code> - retorna uma versão em letras minúsculas da string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "SOME STRING"
+&gt;&gt;&gt; s.lower()
+'some string'</code></pre>
+<p style="font-family: sans-serif;"><code>replace()</code> - substitui todas as ocorrências de uma sub-string da string por uma determinada string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.replace("s", "z")
+'zome ztring'</code></pre>
+<p style="font-family: sans-serif;"><code>split()</code> - retorna uma lista de palavras de uma string, com um separador opcional para ser usado como delimitador</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.split() # default usage
+['some', 'string']
+&gt;&gt;&gt; s.split("t")
+['some s', 'ring']</code></pre>
+<p style="font-family: sans-serif;"><code>startswith()</code> - informa se uma string começa com uma determinada sub-string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "some string"
+&gt;&gt;&gt; s.startswith("so")
+True</code></pre>
+<p style="font-family: sans-serif;"><code>strip()</code> - remove os espaços em branco iniciais e finais do texto</p>
+<p style="font-family: sans-serif;">Opcionalmente, você pode indicar um caractere alternativo para remover do início e do final do texto.</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = " some string "
+&gt;&gt;&gt; s.strip()
+'some string'
+&gt;&gt;&gt; s = "some strings"
+&gt;&gt;&gt; s.strip("s")
+'ome string'</code></pre>
+<p style="font-family: sans-serif;"><code>upper()</code> - retorna uma versão maiúscula da string</p>
+<p style="font-family: sans-serif;"> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; s = "so

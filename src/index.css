@@ -1,3 +1,22 @@
+::-webkit-scrollbar {
+        width: 8px;
+    }
+
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0479fb, #5fdbfa);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5fdbfa;
+    box-shadow: 0 0 0px 5px #e6f7fe;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

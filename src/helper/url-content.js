@@ -1,0 +1,1 @@
+export const base_url = "https://npepa32v9l.execute-api.us-east-1.amazonaws.com/v2/?project_id=15923698&filename=js-01-programming.md&ref=master"

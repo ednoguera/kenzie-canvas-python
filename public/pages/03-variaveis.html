@@ -1,0 +1,185 @@
+<p> </p>
+<div class="mce-toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#mcetoc_1eedfgfv13a5">Tipos Básicos e Variáveis</a>
+<ul>
+<li><a href="#mcetoc_1eedhqt4b2">Nomenclatura das Variáveis</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1eur6kem6gc">Tipos primitivos</a>
+<ul>
+<li><a href="#mcetoc_1eur6kem6gd">Tipos básicos:</a>
+<ul>
+<li><a href="#mcetoc_1eur6ofkgjo">int</a></li>
+<li><a href="#mcetoc_1eur6ofkgjp">float </a></li>
+<li><a href="#mcetoc_1eur6ofkgjq">str</a></li>
+<li><a href="#mcetoc_1eur6ofkgjr">bool</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1eur6kem6ge">Agrupadores de variáveis:</a>
+<ul>
+<li><a href="#mcetoc_1eur6kem6gf">list</a></li>
+<li><a href="#mcetoc_1eur7ofh9vg">tuple</a></li>
+<li><a href="#mcetoc_1eur7ofh9vh">dict</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 class="page-title" id="mcetoc_1eedfgfv13a4"></h1>
+<table>
+<tbody>
+<tr>
+<td>
+<h1 class="page-title" id="mcetoc_1eedfgfv13a5"><span style="font-family: helvetica, arial, sans-serif;">Tipos Básicos e Variáveis</span></h1>
+<p><span style="font-family: helvetica, arial, sans-serif;">Variável é um recurso primal de qualquer linguagem de programação para armazenar valores em memória. Ao declarar uma variável, podemos gravar e ler esses valores diretamente dela a partir do nome que definimos para a variável.</span></p>
+<p><span style="font-family: helvetica, arial, sans-serif;">Atribuir variáveis em Python é fácil: basta colocar um nome de variável à esquerda de um sinal de igualdade <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9;">=</span>:</span></p>
+<pre class="language-python"><code># a variável x recebe o valor 4
+x = 4
+</code></pre>
+<p><span style="font-family: helvetica, arial, sans-serif;">Isso pode parecer óbvio, mas geralmente quando estamos lendo algo no cotidiano, o sinal de <span style="color: #e03e2d; background-color: #ced4d9;">=</span> está associado a uma comparação, já no Python este operador é associado com <strong>atribuição</strong>. Se você tiver o modelo mental errado na hora de interpretar o que esta operação faz, a forma como o Python funciona pode parecer confusa.</span></p>
+<h2 id="mcetoc_1eedhqt4b2"><span style="font-family: helvetica, arial, sans-serif;">Nomenclatura das Variáveis</span></h2>
+<p><span style="font-family: helvetica, arial, sans-serif;">Antes que você possa escrever sem muito esforço um código bonito e livre de bugs, você deve entender porquê ele é bonito. Os códigos são lidos muito mais frequentemente do que são escritos, então a legibilidade faz toda a diferença.</span></p>
+<ul class="simple">
+<li><span style="font-family: helvetica, arial, sans-serif;">Os nomes das variáveis têm comprimento ilimitado</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;">Os nomes das variáveis devem começar com uma letra ou um sublinhado <code>_</code>, seguido de letras, números ou sublinhados.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;">Os nomes das variáveis são sensíveis a letras maiúsculas/minúsculas</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;">Os nomes das variáveis não podem ser palavras-chave</span></li>
+</ul>
+<p><span style="font-family: helvetica, arial, sans-serif;">Os nomes variáveis convencionalmente devem ter letras minúsculas, com múltiplas palavras separadas por sublinhados.</span></p>
+<pre class="language-python"><code># Nome da variável    |   Valor atribuido a variável
+minha_variavel        =  'meu valor em texto'</code></pre>
+<h1 id="mcetoc_1eur6kem6gc"><span style="font-size: 18pt; font-family: helvetica, arial, sans-serif;"><strong>Tipos primitivos</strong></span></h1>
+<p><span style="font-family: helvetica, arial, sans-serif;">Existem alguns tipos básicos de variável em Python que nos ajudam a ter mais controle sobre a lógica na hora desenvolvimento, algumas delas são:</span></p>
+<h2 id="mcetoc_1eur6kem6gd"><span style="font-size: 14pt; font-family: helvetica, arial, sans-serif;">Tipos básicos:</span></h2>
+<ul>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur6ofkgjo"><span style="color: #e03e2d; background-color: #ced4d9; font-family: helvetica, arial, sans-serif;">int</span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">De <strong>integer,</strong> denota que o valor da variável é um algarismo numérico <strong>inteiro</strong>.</span></li>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur6ofkgjp"><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #e03e2d; background-color: #ced4d9;">float</span> </span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">Denota que o valor da variável é um número '<strong>flutuante</strong>' ou <strong>real</strong>, com <strong>casas decimais</strong>.</span></li>
+</ul>
+<h4><span style="font-family: helvetica, arial, sans-serif;">Leia: <span style="background-color: #c2e0f4;"><a class="external" href="https://docs.python.org/pt-br/3/tutorial/introduction.html#numbers" rel="noopener noreferrer" style="background-color: #c2e0f4;" target="_blank" title=""><span style="color: #000000;">Números em Python</span></a></span></span></h4>
+<ul>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur6ofkgjq"><span style="font-family: helvetica, arial, sans-serif;"><strong><span style="color: #e03e2d; background-color: #ced4d9;">str</span></strong></span></h3>
+<span style="font-family: helvetica, arial, sans-serif;"> De <strong>string</strong>, denota que o valor da variável é um ou mais <strong>caracteres</strong>.</span></li>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur6ofkgjr"><span style="color: #e03e2d; background-color: #ced4d9; font-family: helvetica, arial, sans-serif;"><strong>bool</strong></span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">Existem dois tipos incorporados que representam os estados binários <strong>True</strong> e <strong>False</strong>. Um objeto booleano pode ser usado para registrar o estado de algo, por exemplo, se uma tarefa foi concluída ou não, ou se um dispositivo está ligado ou não.</span></li>
+</ul>
+<p><span style="font-family: helvetica, arial, sans-serif;"><strong>L<span style="color: #000000;">eia: <span style="background-color: #c2e0f4;"><a class="external" href="https://docs.python.org/pt-br/3/library/stdtypes.html#boolean-values" rel="noopener noreferrer" style="color: #000000; background-color: #c2e0f4;" target="_blank" title="">Valores Booleanos</a></span></span></strong></span></p>
+<pre class="language-python"><code>x = 1                               # x é um inteiro
+x = 'Olá'                           # agora x é uma string
+x = 1.5                             # agora x é um float
+x = [1, 2, 3]                       # agora x é uma lista de inteiros
+x = (1, 2, 3,)                      # agora x é uma tupla de inteiros
+x = True                            # agora x é um boleano de valor True
+x = {'chave_1': 42, 'chave_2': 500} # agora x é um dicionário
+
+</code></pre>
+<div class="cell border-box-sizing text_cell rendered">
+<h2 class="inner_cell" id="mcetoc_1eur6kem6ge"><span style="font-size: 14pt; font-family: helvetica, arial, sans-serif;">Agrupadores de variáveis:</span></h2>
+<ul>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur6kem6gf"><span style="font-family: helvetica, arial, sans-serif;"><strong><span style="color: #e03e2d; background-color: #ced4d9;">list</span></strong></span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">Utilizada para <strong>agrupar valores</strong>, a qual cada elemento da lista pode ser acessado por um <strong>indice numérico inteiro</strong>, sendo o primeiro elemento o de índice <strong>0</strong>, o segundo de índice <strong>1</strong> e assim por diante. Uma lista pode conter vários dos tipos de variáveis citadas anteriormente, e pode ser alterada conforme o necessário.</span></li>
+</ul>
+<pre class="language-python"><code>x = [1 , 2, 3]                    # x é uma lista de inteiros
+x = ['olá', '0', 'ao', 'python']  # x agora é uma lista de strings
+x = ['1', 'sim', 2, 'olá', 5]     # x agora é uma lista que contém tanto inteiros quanto strings
+
+# Acessando determinado elemento
+x = ['Zero', 'ao', 'Python']
+
+x[0]
+&gt; 'Zero'
+x[1]
+&gt; 'ao'
+x[2]
+&gt; 'Python'
+
+# Reatribuindo valores a um indice de uma lista já criada
+x = ['Zero', 'ao', 'Python']
+
+x[0] = 'Zerooooo'
+
+x
+&gt; ['Zerooooo', 'ao', 'Python']</code></pre>
+<ul>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur7ofh9vg"><span style="color: #e03e2d; background-color: #ced4d9; font-family: helvetica, arial, sans-serif;"><strong>tuple</strong></span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">Utilizada para <strong>agrupar valores</strong>,<strong> </strong>sua diferença para a lista é que a tupla <strong>não pode ser modificada</strong> uma vez criada. Também é possivel acessar os elementos da tupla a partir de um indice numérico inteiro.</span></li>
+</ul>
+<pre class="language-python"><code># Declaração de uma tupla
+minha_tupla = ('Zero', 'ao', 'Python',)
+
+# Acessando determinado elemento
+minha_tupla[0]
+&gt; 'Zero'
+minha_tupla[2]
+&gt; 'Python'
+
+# Tentando reatribuir um valor a um indice da tupla ja criada (error)
+minha_tupla[0] = 'Zerooooooou'
+&gt; TypeError: 'tuple' object does not support item assignment</code></pre>
+<ul>
+<li style="line-height: 1.5;">
+<h3 id="mcetoc_1eur7ofh9vh"><span style="font-family: helvetica, arial, sans-serif;"><strong><span style="color: #e03e2d; background-color: #ced4d9;">dict</span></strong></span></h3>
+<span style="font-family: helvetica, arial, sans-serif;">De <strong>dictionary</strong>, utilizado para <strong>agrupar valores</strong> com <strong>chaves únicas</strong>. Ao contrário das listas e das tuplas, que só suportam indices numéricos inteiros começando em 0, o dicionário nos permite customizar nossos índices para comportar qualquer tipo basico. A esses índices customizáveis damos o nome de <strong>key </strong>ou<strong> chave</strong>, e ao dado associado a ele pelos dois pontos damos o nome de <strong>value</strong> ou <strong>valor</strong>.</span></li>
+</ul>
+<p><span style="font-family: helvetica, arial, sans-serif;">         Observe que no exemplo, a primeira chave <span style="color: #e03e2d; background-color: #ced4d9;">'chave_1'</span> é do tipo <strong>string</strong> e seu valor é <span style="color: #e03e2d; background-color: #ced4d9;">20</span> do tipo<span style="color: #e03e2d; background-color: #ced4d9;"> int</span>. Ja a segunda chave <span style="color: #e03e2d; background-color: #ced4d9;">2</span> é do tipo <strong>int </strong>e seu valor <span style="color: #e03e2d; background-color: #ced4d9;">'valor_2'</span> é do tipo <strong>string</strong></span></p>
+<pre class="language-python"><code># Declarando um dicionário
+meu_dict = {'chave_1': 20, 2: 'valor_2'}
+
+# Acessando um determinado valor de um dicionário
+my_dict['chave_1']
+&gt; 20
+</code></pre>
+</div>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td>
+<h1 id="mcetoc_1eedhvoks4"></h1>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><!-- Global site tag (gtag.js) - Google Analytics --></span></p>
+<p> </p>

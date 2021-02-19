@@ -1,0 +1,26 @@
+Módulo,Dia,lesson,file (0_ao_py),Status
+Instruções para o curso,1,Orientações gerais para o curso,0_ao_py_instrucoes.html,todo
+Instruções para o curso,1,Utilizar Google Colab,0_ao_py_google_colab.html,todo
+Instruções para o curso,1,Codewars,0_ao_py_codewars.html,todo
+Módulo A - Criando e utilizando variáveis,1,Variáveis,0_ao_py_variaveis.html,todo
+Módulo A - Criando e utilizando variáveis,1,Prática - Variáveis,0_ao_py_pratica_$$$$.html,todo
+Módulo B - Tomando decisões com programação,1,Estruturas de decisão,0_ao_py_$$$$.html,todo
+Módulo B - Tomando decisões com programação,1,Prática - Estruturas de decisão,0_ao_py_pratica_$$$$.html,todo
+Módulo C - Utilizando e avaliando Strings,2,Strings,0_ao_py_strings.html,OK
+Módulo C - Utilizando e avaliando Strings,2,Prática - Strings,0_ao_py_pratica_$$$$.html,todo
+Módulo D - Utilizando coleções de valores,2,Listas,0_ao_py_lists.html,OK
+Módulo D - Utilizando coleções de valores,2,Prática - Listas,0_ao_py_pratica_$$$$.html,todo
+Módulo D - Utilizando coleções de valores,2,Tuplas,0_ao_py_tuplas.html,OK
+Módulo D - Utilizando coleções de valores,2,Prática - Tuplas,0_ao_py_pratica_tuplas.html,todo
+Módulo E - Modificando e avaliando listas de dados,2,Loops,0_ao_py_loops.html,OK
+Módulo E - Modificando e avaliando listas de dados,2,Prática - Loops,0_ao_py_pratica_loops.html,todo
+Módulo F - Criando partes reutilizáveis de software,3,Funções,0_ao_py_$$$$.html,todo
+Módulo F - Criando partes reutilizáveis de software,3,Prática - Funções,0_ao_py_pratica_$$$$.html,todo
+Módulo G - Dados simples e significativos,4,Dicionários,0_ao_py_dicionarios.html,OK
+Módulo G - Dados simples e significativos,4,Iteração em dicionários,0_ao_py_$$$$.html,todo
+Módulo G - Dados simples e significativos,4,Prática - Dicionários,0_ao_py_pratica_$$$$.html,todo
+Módulo G - Dados simples e significativos,4,Prática - Iteração em dicionários,0_ao_py_pratica_$$$$.html,todo
+"Módulo H - Trabalhando com Dados, persistência e conhecimento",5,O que é um arquivo CSV,0_ao_py_csv.html,todo
+"Módulo H - Trabalhando com Dados, persistência e conhecimento",5,Processando arquivos CSV com Python,0_ao_py_processando_csv.html,todo
+"Módulo H - Trabalhando com Dados, persistência e conhecimento",5,Prática - O que é um arquivo CSV,0_ao_py_pratica_$$$$.html,todo
+"Módulo H - Trabalhando com Dados, persistência e conhecimento",5,Prática - Processando arquivos CSV com Python,0_ao_py_pratica_$$$$.html,todo

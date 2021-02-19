@@ -1,0 +1,244 @@
+<div class="mce-toc" style="font-family: sans-serif;">
+<h2>Table of Contents</h2>
+<ul>
+<li> </li>
+<li><a href="#mcetoc_1esr228uu5ab">Vídeo Explicativo</a></li>
+<li><a href="#mcetoc_1esr228uu5ac">Entrega</a>
+<ul>
+<li><a href="#mcetoc_1egvsckqv3">Exercícios</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1egvoav555j">Entregáveis</a>
+<ul>
+<li><a href="#mcetoc_1egvrpv6k1l4">Repositório</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1esr3rg980">Critérios de aceitação</a>
+<ul>
+<li> </li>
+</ul>
+</li>
+<li> </li>
+</ul>
+</div>
+<h1 id="mcetoc_1el88amc62" style="font-family: sans-serif;"></h1>
+<p id="mcetoc_1el88amc63" style="font-family: sans-serif;"></p>
+<h1 id="mcetoc_1esr228uu5ab"><span style="font-family: helvetica, arial, sans-serif;">Vídeo Explicativo</span></h1>
+<p style="font-family: sans-serif; text-align: center;"><iframe allowfullscreen="allowfullscreen" height="300" src="https://player.vimeo.com/video/507603293?title=0&amp;byline=0&amp;portrait=0&amp;color=8dc7dc" width="540"></iframe></p>
+<h1 id="mcetoc_1esr228uu5ac" style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Entrega</span></h1>
+<p style="font-size: medium; font-weight: 400;"><span style="font-family: helvetica, arial, sans-serif;">Olá, devs. Nessa prática, o objetivo é criar uma agenda telefônica para encontrar e registrar facilmente os nossos contatos.</span></p>
+<ul style="font-size: medium; font-weight: 400;">
+<li><span style="font-family: helvetica, arial, sans-serif;">Crie um arquivo chamado <span style="color: #ba372a; background-color: #ced4d9;">main.py</span></span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;">Implemente todas as funções de acordo com as descrições.</span></li>
+</ul>
+<hr style="font-size: medium; font-weight: 400;"/>
+<h2 id="mcetoc_1egvsckqv3" style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Exercícios</span></h2>
+<p><span style="font-family: helvetica, arial, sans-serif;">     <strong>1 -&gt; </strong>Crie uma lista, chamada <span style="background-color: #ced4d9; color: #ba372a;">lista_de_contatos</span>, ela deve estar inicialmente vazia. </span></p>
+<p><span style="font-family: helvetica, arial, sans-serif;">     <strong>2 -&gt;</strong> Crie uma função chamada <span style="color: #ba372a; background-color: #ced4d9;">registrar_contato</span>, ela deve ter a seguinte estrutura:</span></p>
+<ul style="font-size: medium; font-weight: 400;">
+<li style="line-height: 1.1;"><span style="font-family: sans-serif; background-color: #ced4d9;"><strong><span style="color: #ba372a; font-family: helvetica, arial, sans-serif; font-size: 14pt;">registrar_contato<br/></span></strong></span><br/>
+<ul>
+<li style="font-family: sans-serif; line-height: 1.3;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Parâmetros:</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">lista</span>: deve receber a <span style="color: #ba372a; background-color: #ced4d9;">lista_de_contatos</span> que estará inicialmente <strong>vazia</strong>.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">nome</span>: deve receber o nome da pessoa, deve ser uma <strong>string</strong>. </span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">telefone</span>: Deve registrar o telefone da pessoa, deve ser uma <strong>string</strong> com o formato livre (vai que você quer guardar um contato de outro país).</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">cidade</span> : Deve ser uma <strong>string</strong> com o nome da cidade em que a pessoa mora.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="background-color: #ced4d9; color: #ba372a;">profissao</span> : Deve receber a profissão da pessoa, caso não saiba, deve ser uma <strong>string</strong> vazia.</span></li>
+</ul>
+</li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><strong>Procedimento:</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;">Deve atualizar a <span style="color: #ba372a; background-color: #ced4d9;">lista</span> de contatos passada por parâmetro com um <strong>dicionário</strong> contendo todas as informações também passadas por parâmetro.</span></li>
+</ul>
+</li>
+<li style="font-family: sans-serif; line-height: 1.3;"><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Retorno:</strong> Deve retornar a <strong>lista de dicionários</strong> com as informações atualizadas.</span></span></span></li>
+<li style="font-family: sans-serif; line-height: 1.3;"><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;"><strong><span style="color: #000000; background-color: #ffffff;">Importante: </span></strong></span></span><span style="font-family: helvetica, arial, sans-serif;"><span><span style="color: #ba372a; background-color: #ced4d9;"><span style="color: #000000; background-color: #ffffff;">Os telefones <strong>não podem</strong> se repetir.</span></span></span></span>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; border-radius: 0.3em;"><code># EXEMPLO 1:
+
+contato_registrado = registrar_contato(lista_de_contatos, "Ted Evelyn Mosby", "11 98765-4321", "Nova Iorque", "Arquiteto")
+
+print(contato_registrado)
+
+&gt; [{
+        "nome": "Ted Evelyn Mosby",
+        "telefone": "11 98765-4321",
+        "cidade": "Nova Iorque",
+        "profissao": "Arquiteto"
+   }]</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<p><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;"><span style="color: #000000; background-color: #ffffff;">     <strong>3 -&gt;</strong> Crie uma segunda função chamada <strong>buscar_contato</strong>, que deve seguir a seguinte estrutura:</span></span></span></span></p>
+<ul style="font-family: sans-serif; font-size: medium; font-weight: 400;">
+<li style="font-family: sans-serif;"><span style="font-size: 14pt; color: #e03e2d;"><strong><span style="font-family: helvetica, arial, sans-serif;"><span style="background-color: #ced4d9;"><span style="color: #ba372a;">buscar_contato</span><br/></span></span></strong></span><br/>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;"><strong>Parâmetros:</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">lista</span>: Deve receber a <span style="background-color: #ced4d9; color: #ba372a;">lista_de_contatos</span>.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">nome</span>: Que deverá ser o nome do contato que a pessoa está procurando, no formato <strong>string</strong>.</span></li>
+</ul>
+</li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Procedimento:</strong> Deve filtrar uma lista de dicionários de todos os usuários, cuja as <strong>três primeiras letras</strong> comecem com as <strong>mesmas 3 primeiras letras</strong> dos nomes passados por parâmetro.</span></span></li>
+<li style="line-height: 1.3;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Retorno:</strong> Deve a <strong>lista de dicionários</strong> com todos os usuários filtrados.</span><br/>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; border-radius: 0.3em;"><code># EXEMPLO 2: 
+
+contatos_filtrados = buscar_contato(lista_de_contatos, "Marshall")
+
+print(contatos_filtrados)
+
+&gt; [
+        {
+            "nome": "Mark Well",
+            "telefone": "11 12312-1234",
+            "cidade": "Curitiba",
+            "profissao": "Pedreiro"
+        },
+        {
+            "nome": "Marshall Eriksen",
+            "telefone": "11 12345-6789",
+            "cidade": "Nova Iorque",
+            "profissao": "Advogado"
+        }
+    ]</code></pre>
+<br/>
+<p> </p>
+</li>
+</ul>
+</li>
+<li><span style="font-size: 14pt; color: #e03e2d;"><strong><span style="background-color: #ced4d9; font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a;">alterar_contato</span><br/></span></strong></span>
+<ul>
+<li style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Parâmetros:</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">lista</span>: Deve receber a <span style="color: #ba372a; background-color: #ced4d9;">lista_de_contatos</span>.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">dic</span>: Um <strong>dicionário</strong> com os atributos que deseja alterar.</span></li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a; background-color: #ced4d9;">nome</span>: Nome do usuário que deseja realizar as alterações, em formato <strong>string</strong>.</span></li>
+</ul>
+</li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><strong>Procedimento:</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;">Deve atualizar o dicionário com os dados passados por parâmetro.</span></li>
+</ul>
+</li>
+<li style="line-height: 1.3;"><span style="font-family: helvetica, arial, sans-serif;"><strong>Retorno:</strong> Deve retornar uma <strong>lista de dicionários</strong> com os dados do novo contato atualizado.</span><br/><br/>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code># EXEMPLO 3
+
+contato_atualizado = alterar_contato(lista_de_contatos, {"telefone": "11 78910-1098", "profissao": "Engenheiro"}  ,"Ted Evelyn Mosby")
+
+print(contato_atualizado)
+
+&gt;[
+         {      
+           "nome": "Ted Evelyn Mosby",
+           "telefone": "11 78910-1098",
+           "cidade": "Nova Iorque",
+           "profissao": "Engenheiro"
+         },
+        {
+            "nome": "Mark Well",
+            "telefone": "11 12312-1234",
+            "cidade": "Curitiba",
+            "profissao": "Pedreiro"
+        },
+        {
+            "nome": "Marshall Eriksen",
+            "telefone": "11 12345-6789",
+            "cidade": "Nova Iorque",
+            "profissao": "Advogado"
+        }
+    ] 
+</code></pre>
+ </li>
+</ul>
+</li>
+</ul>
+<p>     <strong>4 -&gt;</strong> No final da sua aplicação, você deve ser capaz de registrar um contato e buscá-lo na lista quando precisar. Agora, uma das partes mais importantes, <strong>CRIE</strong> <strong>TESTES</strong>, nessa atividade você será livre para desenvolver seus testes, contanto que eles tenham uma cobertura de <strong>100%</strong> no seu código!</p>
+<hr style="font-family: sans-serif; font-size: medium; font-weight: 400;"/>
+<h1 id="mcetoc_1egvoav555j" style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif; font-size: 18pt;">Entregáveis</span></h1>
+<h2 id="mcetoc_1egvrpv6k1l4" style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif;">Repositório</span></h2>
+<ul style="font-size: medium; font-weight: 400;">
+<li><span style="font-family: helvetica, arial, sans-serif;">Link do <strong>repositório</strong> do <strong>GitLab</strong></span><br/>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;"><strong>Commits</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;">Será considerado o commit com <strong>timestamp anterior a realização da entrega no canvas </strong> </span></li>
+</ul>
+</li>
+<li><strong><span style="font-family: helvetica, arial, sans-serif;">Código fonte:</span></strong>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;">Arquivo <strong>main.py</strong>.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-family: helvetica, arial, sans-serif;"><strong>Privacidade</strong></span>
+<ul>
+<li><span style="font-family: helvetica, arial, sans-serif;">Incluir <strong>ka-br-jul-2020-correcoes</strong> como reporter.</span></li>
+</ul>
+</li>
+</ul>
+<h1 id="mcetoc_1esr3rg980" style="font-family: sans-serif;"><span style="font-family: helvetica, arial, sans-serif; font-size: 18pt;">Critérios de aceitação</span></h1>
+<table data-sourcepos="22:1-28:140" dir="auto" style="padding: 0px; font-family: sans-serif; height: 158px; width: 1025.45px;">
+<thead>
+<tr data-sourcepos="22:1-22:35" style="border-top: 1px solid #cccccc; background-color: white; margin: 0px; padding: 0px; height: 21px;">
+<th data-sourcepos="22:2-22:4" style="border: 1px solid #cccccc; text-align: left; margin: 0px; padding: 6px 13px; height: 21px; width: 38px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">pts</span></th>
+<th data-sourcepos="22:6-22:12" style="border: 1px solid #cccccc; text-align: left; margin: 0px; padding: 6px 13px; height: 21px; width: 146px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Dado</span></th>
+<th data-sourcepos="22:14-22:24" style="border: 1px solid #cccccc; text-align: left; margin: 0px; padding: 6px 13px; height: 21px; width: 420px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Quando</span></th>
+<th data-sourcepos="22:26-22:34" style="border: 1px solid #cccccc; text-align: left; margin: 0px; padding: 6px 13px; height: 21px; width: 364px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">É esperado</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top: 1px solid #cccccc; background-color: white; margin: 0px; padding: 0px; height: 65px;">
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 38px; height: 40px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">0.75</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 146px; height: 40px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;"><span style="margin-top: 0px; margin-bottom: 0px; color: #ba372a; background-color: #ced4d9;">registrar_contato</span></span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 420px; height: 40px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Na chamada da função com os parâmetros corretos</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 364px; height: 40px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Que retorne uma lista de dicionários com os dados atualizados</span></td>
+</tr>
+<tr style="border-top: 1px solid #cccccc; background-color: #f8f8f8; margin: 0px; padding: 0px; height: 21px;">
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 38px; height: 21px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">0.75</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 146px; height: 21px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;"><span style="color: #ba372a;"><span style="background-color: #ced4d9;">buscar_contato</span></span></span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 420px; height: 21px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Na chamada da função com os parâmetros corretos</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 364px; height: 21px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Que retorne uma lista de dicionários com os dados solicitados</span></td>
+</tr>
+<tr style="height: 66px;">
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 38px; height: 66px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">0.75</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 146px; height: 66px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif; background-color: #ced4d9; color: #e03e2d;">alterar_contato</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 420px; height: 66px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Na chamada da função com os parâmetros corretos<br/></span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 364px; height: 66px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Que retorne uma lista de dicionários com os dados atualizados</span></td>
+</tr>
+<tr style="border-top: 1px solid #cccccc; background-color: white; margin: 0px; padding: 0px; height: 21px;">
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 38px; height: 10px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">0.75</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 146px; height: 10px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Testes são criados</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 420px; height: 10px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Ao executar o comando pytest no terminal</span></td>
+<td style="border: 1px solid #cccccc; margin: 0px; padding: 6px 13px; width: 364px; height: 10px;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Os testes passem e tenham uma cobertura de 100% no código</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mcetoc_1egvoav555h" style="font-family: sans-serif;"></h4>
+<h2 id="mcetoc_1eh0bjirm0" style="font-family: sans-serif;"></h2>
+<h1 id="mcetoc_1el3o6ean8" style="font-family: sans-serif;"></h1>
+<p style="font-size: medium; font-weight: 400;"> </p>
+<p style="font-size: medium; font-weight: 400; text-align: center;"><strong style="font-family: helvetica, arial, sans-serif;"><span style="font-size: 32px;">Boa diversão, devs! 🎢</span></strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>

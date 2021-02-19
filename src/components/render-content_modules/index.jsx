@@ -9,7 +9,9 @@ const Content = (props) => {
     const fetchContent = () => {
         fetch(`${props.selectedLesson}`)
             .then(res => res.text())
-            .then(body => setContent(body))
+            .then(
+                body => setContent(body)
+            )
     }
 
     fetchContent()

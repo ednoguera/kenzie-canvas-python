@@ -33,7 +33,7 @@ const StyledContent = styled.div`
     margin: 0 0 0 30%;
     text-align: left;
 
-    @media (min-width: 320px) and (max-width: 375px) {
+    @media (min-width: 320px) and (max-width: 374px) {
         width: 300px;
         margin: 1rem auto;
 
@@ -43,6 +43,48 @@ const StyledContent = styled.div`
 
         pre {
             width: 290px;
+        }
+
+    }
+
+    @media (min-width: 375px) and (max-width: 424px) {
+        width: 360px;
+        margin: 1rem auto;
+
+        p {
+            width: 360px;
+        }
+
+        pre {
+            width: 360px;
+        }
+
+    }
+
+    @media (min-width: 425px) and (max-width: 767px) {
+        width: 390px;
+        margin: 1rem auto;
+
+        p {
+            width: 390px;
+        }
+
+        pre {
+            width: 390px;
+        }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        width: 390px;
+        margin: 1rem auto;
+
+        p {
+            width: 390px;
+        }
+
+        pre {
+            width: 390px;
         }
 
     }

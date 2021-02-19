@@ -37,31 +37,13 @@ def remove_tags_from_page(page):
 
 # CREATE A FUNCTION THAT'S MAKE A JSON FILE WITH LINK AND CONTENT
 def create_json_file(url, content, file):
+    # THIS FUNCTION NEEDS TO CREATE A JSON BLOCK THAT STILL THE LESSON_ARRAY.JS STYLE
+    ...
 
-    content_block = {
-        "module": "Fundamentos de programação com Python",
-        "topicName": "INSTRUÇÕES PARA O CURSO",
-        "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/295",
-        "iframeUrl": "",
-        "fileName": "l_00-instrucoes-para-o-curso",
-        "lessonsList": [
-            {
-                "module": "Fundamentos de programação com Python",
-                "lessonName": "00 - Orientações gerais para o curso",
-                "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/232",
-                "iframeUrl": "/pages/00-instrucoes.html",
-                "fileName": ""
-            }
-        ],
-        "issuesList": []
-    },
-
-    with open(file, 'w') as jsonfile:
-        json.dump(content_block, jsonfile, indent=2)
-
-    return content_block
 
 # CREATE A FUNCTION THAT'S READ THE FILE, AND RETURNS A LIST TO APPEND IN THE JSON FILE
+def read_json_file():
+    ...
 
 
 def create_html_page(file, path):

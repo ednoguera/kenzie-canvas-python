@@ -32,4 +32,18 @@ const StyledContent = styled.div`
     width: 60%;
     margin: 0 0 0 30%;
     text-align: left;
+
+    @media (min-width: 320px) and (max-width: 375px) {
+        width: 300px;
+        margin: 1rem auto;
+
+        p {
+            width: 300px;
+        }
+
+        pre {
+            width: 290px;
+        }
+
+    }
 `

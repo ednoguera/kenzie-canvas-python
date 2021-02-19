@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import IframeRender from '../iframe-render_modules/'
 import { base_url } from '../../helper/url-content'
+import styled from 'styled-components'
 
 const Content = (props) => {
     const [fetchedContent, setFetchedContent] = useState(base_url)
@@ -20,10 +20,16 @@ const Content = (props) => {
         <div>
             <div>
                 {/* {fetchedContent !== undefined ? <IframeRender src={props.selectLesson} title={props.title} /> : null} */}
-                {fetchedContent !== undefined ? <div dangerouslySetInnerHTML={{ __html: content }} /> : null}
+                {fetchedContent !== undefined ? <StyledContent dangerouslySetInnerHTML={{ __html: content }} /> : null}
             </div>
         </div>
     )
 }
 
 export default Content
+
+const StyledContent = styled.div`
+    width: 60%;
+    margin: 0 0 0 30%;
+    text-align: left;
+`

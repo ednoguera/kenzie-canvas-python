@@ -1,0 +1,91 @@
+<div class="mce-toc">
+<h2>Table of Contents</h2>
+<ul>
+<li> </li>
+<li><a href="#mcetoc_1eur6gjrm5">Dia 2: Tuplas</a>
+<ul>
+<li><a href="#mcetoc_1eur6gjrm6">Sintaxe das tuplas</a></li>
+<li> </li>
+<li><a href="#mcetoc_1esroql0c1a">Acessando Tuplas</a></li>
+<li><a href="#mcetoc_1esroql0c1b">As Tuplas são Imutáveis</a></li>
+<li><a href="#mcetoc_1esroql0c1c">Desempenho das Tuplas</a></li>
+<li><a href="#mcetoc_1er726hvr3i">Métodos de Tuplas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="mcetoc_1eur6gjrm4"></h1>
+<h1 id="mcetoc_1eur6gjrm5">Dia 2: Tuplas</h1>
+<p> </p>
+<p>As tuplas, assim como as listas, são um dos tipos básicos de dados de sequência do Python. Entretanto, elas se diferem das listas no sentido em que são imutáveis. Elas são o tipo de dado perfeito para quando você precisa armazenar dados agrupados de forma que eles não possam ser modificados, tais como as constantes para usar ao longo de um programa. Nesta aula, destacaremos as características e métodos das tuplas.</p>
+<p> </p>
+<h2 id="mcetoc_1eur6gjrm6">Sintaxe das tuplas</h2>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; animals = ("dog", "cat", "squirrel")  # a tuple created using parentheses
+&gt;&gt;&gt; animals
+('dog', 'cat', 'squirrel')
+&gt;&gt;&gt; type(animals)
+&lt;class 'tuple'&gt;
+&gt;&gt;&gt; animals = "dog", "cat", "squirrel"  # a tuple created without using parentheses
+&gt;&gt;&gt; animals
+('dog', 'cat', 'squirrel')
+&gt;&gt;&gt; type(animals)
+&lt;class 'tuple'&gt;</code></pre>
+<p>Uma tupla de elemento único pode ser criada através da colocação de uma vírgula depois de um único valor, entre parênteses ou não.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; favorite_animal = ("sloth",)  # perceba a virgula colocada após as aspas duplas
+&gt;&gt;&gt; favorite_animal
+('sloth',)
+&gt;&gt;&gt; type(favorite_animal)
+&lt;class 'tuple'&gt;
+&gt;&gt;&gt; favorite_animal = "sloth",  # perceba a vírgula colocada após as aspas duplas
+&gt;&gt;&gt; favorite_animal
+('sloth',)
+&gt;&gt;&gt; type(favorite_animal)
+&lt;class 'tuple'&gt;</code></pre>
+<h2 id="mcetoc_1eur6gjrm7" style="font-family: sans-serif;"></h2>
+<h2 id="mcetoc_1esroql0c1a" style="font-family: sans-serif;">Acessando Tuplas</h2>
+<p>Os elementos de uma tupla podem ser acessados da mesma forma que acessamos as listas, com indexação e fatiamento.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; animals = ("dog", "cat", "squirrel")
+&gt;&gt;&gt; animals[0]
+'dog'
+&gt;&gt;&gt; animals[1:]
+('cat', 'squirrel')</code></pre>
+<p> </p>
+<h2 id="mcetoc_1esroql0c1b" style="font-family: sans-serif;">As Tuplas são Imutáveis</h2>
+<p>Os valores de uma tupla não podem ser alterados. Se você tentar reatribuir um índice de uma tupla, uma exceção será exibida.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; animals = ("dog", "cat", "squirrel")
+&gt;&gt;&gt; animals[2] = "moose"
+Traceback (most recent call last):
+  File "", line 1, in 
+TypeError: 'tuple' object does not support item assignment</code></pre>
+<p style="font-family: sans-serif;"><em>Observação</em>: estruturas mutáveis aninhadas <em>dentro</em> de uma tupla, no entanto, <em>podem</em> ser modificadas (por exemplo, uma lista dentro de uma tupla), o que pode resultar em algumas coisas diferentes que você deve ficar atento quando começar a usar o Python de formas mais avançadas.</p>
+<p style="font-family: sans-serif;"> </p>
+<h2 id="mcetoc_1esroql0c1c" style="font-family: sans-serif;">Desempenho das Tuplas</h2>
+<p>A imutabilidade das tuplas é importante para entender seu uso. Considere adicionar itens a uma lista. Como uma lista é mutável, ela pode ser modificada sem criar qualquer novo objeto na lista. Aqui está um exemplo de atribuição de 10 número a uma lista, um de cada vez.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = []
+&gt;&gt;&gt; for i in range(10):
+...   my_list.append(i)  # modify my_list in place
+...
+&gt;&gt;&gt; my_list
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+<p>Agora, considere tentar o mesmo tipo de operação com uma tupla. Devido a sua imutabilidade, um novo objeto tupla deve ser criado em cada iteração.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_tuple = ()
+&gt;&gt;&gt; for i in range(10):
+... my_tuple += (i,)  # create a new object each time
+... 
+&gt;&gt;&gt; my_tuple
+(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</code></pre>
+<p style="font-family: sans-serif;"><span data-darkreader-inline-color="" style="color: #ba372a;">A mutabilidade é importante para o desempenho quando você sabe que estará modificando frequentemente um objeto. Neste caso, use uma lista para evitar a criação de um novo objeto cada vez que ela for modificada. As tuplas, por outro lado, são a escolha perfeita para os dados que você sabe que não serão modificados.</span></p>
+<p style="font-family: sans-serif;"> </p>
+<p style="font-family: sans-serif;"> </p>
+<h2 id="mcetoc_1er726hvr3i" style="font-family: sans-serif;">Métodos de Tuplas</h2>
+<p> </p>
+<p><code>count()</code><span style="font-family: sans-serif;"> - retorna o número de ocorrências de um determinado valor na tupla</span></p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; nums = (11, 33, 42, 50, 33, 98)
+&gt;&gt;&gt; nums.count(33)
+2</code></pre>
+<p> </p>
+<p style="font-family: sans-serif;"><code>index()</code> - retorna o índice da primeira ocorrência de um determinado valor na tupla</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; nums = (11, 33, 42, 50, 33, 98)
+&gt;&gt;&gt; nums.index(33)
+1</code></pre>
+<p style="font-family: sans-serif;">E esses são todos os métodos das tuplas! O poder delas está em sua implementação e utilização, em vez de numa abundância de métodos de manipulação de dados, uma vez que, bem, seus dados não podem ser manipulados! Esperamos que você tenha aproveitado ao máximo todo o conteúdo, conte conosco para o que precisar!</p>

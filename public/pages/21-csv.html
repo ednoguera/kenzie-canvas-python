@@ -1,0 +1,109 @@
+<div class="mce-toc">
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#mcetoc_1ehqfr33ia">Utilizando dados de um arquivo CSV</a>
+<ul>
+<li><a href="#mcetoc_1ehqfr33ib">Persistência de dados</a></li>
+<li><a href="#mcetoc_1ehqfr33ic">Processando um arquivo CSV</a>
+<ul>
+<li><a href="#mcetoc_1ehqfr33id">Lendo um arquivo CSV</a></li>
+<li><a href="#mcetoc_1ehqfr33ie">Escrevendo em arquivo CSV</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mcetoc_1ehqfr33if">Resources:</a></li>
+</ul>
+</div>
+<p> </p>
+<h1 id="mcetoc_1ehqfr33ia">Utilizando dados de um arquivo CSV</h1>
+<h2 id="mcetoc_1ehqfr33ib">Persistência de dados</h2>
+<p>Persistência, em computação, refere à característica de um dado sobreviver ao processo que o criou. Como exemplo, podemos utilizar várias formas de termos persistência em uma aplicação, como em arquivos, bancos de dados, bancos em memória RAM, entre outros.</p>
+<h2 id="mcetoc_1ehqfr33ic">Processando um arquivo CSV</h2>
+<p>Um arquivo CSV organiza dados de maneira tabular, sendo possível distinguirmos linhas e colunas, onde as colunas são divididas por uma vírgula simples.</p>
+<p>Esta organização de dados é semelhante ao que vemos em um arquivo do famoso Excel ou do Google Spreadsheet.</p>
+<p>Vejamos um exemplo abaixo, que armezana informações de pães de um estabelecimento:</p>
+<p><span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9;">paes.csv</span></p>
+<pre class="language-bash"><code>id_produto,descricao,valor,desconto
+1,Pão de Queijo,1.00,0.0
+2,Pão de Forma,6.00,0.4
+3,Pão de Milho,0.70,0.0
+4,Pão de Mel,2.50,0.3</code></pre>
+<p> </p>
+<p>E aqui, mais uma vez o Python nos trás uma funcionalidade, o módulo <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9;">csv</span> que é um <em>built-in</em>, que nos possibilita realizar operações com arquivos CSV</p>
+<p> </p>
+<h3 id="mcetoc_1ehqfr33id">Lendo um arquivo CSV</h3>
+<p>Para fazer esta leitura vamos instruir a máquina a fazer o seguinte</p>
+<ul>
+<li>importar o módulo csv</li>
+<li>abrir o arquivo csv em modo de leitura</li>
+<li>criar um leitor de csv, que é um iterador sobre o arquivo</li>
+<li>iterar sobre as linhas para obtermos os dados</li>
+<li>fechar o arquivo csv</li>
+</ul>
+<p>Nosso código equivalente é o seguinte</p>
+<pre class="language-python"><code>import csv
+
+with open('paes.csv', 'r') as paes_csv:
+    reader = csv.reader(paes_csv)
+    for linha in reader:
+        print(linha)</code></pre>
+<p>A saída (output) será a seguinte</p>
+<pre class="language-ruby"><code>['id_produto', 'descricao', 'valor', 'desconto']
+['1', 'Pão de Queijo', '1.00', '0.0']
+['2', 'Pão de Forma', '6.00', '0.4']
+['3', 'Pão de Milho', '0.70', '0.0']
+['4', 'Pão de Mel', '2.50', '0.3']</code></pre>
+<h3 id="mcetoc_1ehqfr33ie">Escrevendo em arquivo CSV</h3>
+<p>Para incluir um novo registro no nosso CSV de pães vamos utilizar uma lista para representar uma linha e então adicioná-la no fim do arquivo, instruindo a máquina a fazer o seguinte:</p>
+<ul>
+<li>importar o módulo csv</li>
+<li>abrir o arquivo em modo leitura</li>
+<li>criar um escritor de csv
+<ul>
+<li>definir o caractere de delimitador</li>
+<li>definir o caractere que indica o fim da linha</li>
+</ul>
+</li>
+<li>criar uma lista com os dados para serem colocados na linha</li>
+<li>passar a lista para o escritor adicioná-la no fim do arquivo csv</li>
+<li>fechar o arquivo csv</li>
+</ul>
+<p>Tranformando isso em código Python, temos o seguinte:</p>
+<pre class="language-python"><code>import csv
+
+with open('paes.csv', 'a') as paes_csv:
+    writer = csv.writer(paes_csv, delimiter=',', lineterminator='\n')
+    pao = [5, 'Pão cevado', 4.00, 0.0]
+    writer.writerow(pao)</code></pre>
+<p>Dessa forma teremos uma nova linha no nosso arquivo<span data-darkreader-inline-bgcolor="" style="background-color: #ced4d9;"><span data-darkreader-inline-color="" style="color: #ba372a;"> paes.csv</span>,</span> como a seguir.</p>
+<pre class="language-python"><code>id_produto,descricao,valor,desconto
+1,Pão de Queijo,1.00,0.0
+2,Pão de Forma,6.00,0.4
+3,Pão de Milho,0.70,0.0
+4,Pão de Mel,2.50,0.3
+5,Pão cevado,4.0,0.0</code></pre>
+<p> </p>
+<h1 id="mcetoc_1ehqfr33if">Resources:</h1>
+<ul>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html" rel="noopener" target="_blank">Documentação do Python</a>
+<ul>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html#csv.DictReader" rel="noopener" target="_blank">DictReader</a></li>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html#csv.DictWriter" rel="noopener" target="_blank">DictWriter</a></li>
+</ul>
+</li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>

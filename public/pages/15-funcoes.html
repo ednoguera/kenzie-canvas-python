@@ -1,1 +1,103 @@
-{"message": "Internal server error"}
+<div class="mce-toc" style="font-family: sans-serif; font-size: medium; font-weight: 400;">
+<h2 data-gramm="false" spellcheck="false">Table of Contents</h2>
+<ul>
+<li> </li>
+<li><a href="#mcetoc_1eut7bn2b0">Funções</a>
+<ul>
+<li><a href="#mcetoc_1eut7bn2b1">Exemplo</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1eut7bn2b2">Parâmetros</a>
+<ul>
+<li><a href="#mcetoc_1eut7bn2b3">Exemplo</a></li>
+<li><a href="#mcetoc_1eut7bn2b4">Exemplo 2</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1eut7bn2b5">Parâmetros Padrão e Retorno</a>
+<ul>
+<li><a href="#mcetoc_1eut7c8li6">Exemplo</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="mcetoc_1emertfop6"></h2>
+<h1 id="mcetoc_1etk5nns41"></h1>
+<h1 id="mcetoc_1eut7bn2b0">Funções</h1>
+<ul>
+<li>Função é um bloco de código que só vai ser executado quando chamado.</li>
+<li>Uma função também pode retornar dados.</li>
+<li>Para executar uma função, coloque o nome (da função) seguido de parênteses.</li>
+</ul>
+<h2 id="mcetoc_1eut7bn2b1">Exemplo</h2>
+<pre class="language-python"><code>def funcao():
+    print('dentro da função')
+
+funcao()  # &lt;- Executando a função
+
+# Retorno
+&gt; dentro da função</code></pre>
+<p> </p>
+<h1 id="mcetoc_1eut7bn2b2">Parâmetros</h1>
+<ul>
+<li>Uma função pode receber múltiplos argumentos nos parâmetros dela ou não receber nenhum.</li>
+<li>Os argumentos são passados nos parênteses, que estão logo após o nome da função.</li>
+<li>Você também pode passar alguns parâmetros padrão para sua função.</li>
+</ul>
+<h2 id="mcetoc_1eut7bn2b3">Exemplo</h2>
+<p>Utilizando apenas um argumento.</p>
+<pre class="language-python"><code>def funcao(nome):
+    print('Bom dia, ' + nome)
+
+funcao('Kenzie!')
+funcao('Luan')
+funcao('Guilherme')
+
+# Retornos
+&gt; Bom dia, Kenzie!
+&gt; Bom dia, Luan
+&gt; Bom dia, Guilherme</code></pre>
+<p> </p>
+<h2 id="mcetoc_1eut7bn2b4">Exemplo 2</h2>
+<p>Utilizando múltiplos argumentos.</p>
+<p> </p>
+<pre class="language-python"><code>def funcao(nome1, nome2, nome3):
+    print(nome1 + ', ' + nome2 + ', ' + nome3)
+
+funcao('Seiya', 'Yoga', 'Ikki')
+funcao('Naruto', 'Sasuke', 'Sakura')
+funcao('Inuyasha', 'Kagome', 'Miroku')
+
+
+# Retornos
+
+&gt; Seiya, Yoga, Ikki
+&gt; Naruto, Sasuke, Sakura
+&gt; Inuyasha, Kagome, Miroku</code></pre>
+<p> </p>
+<h1 id="mcetoc_1eut7bn2b5">Parâmetros Padrão e Retorno</h1>
+<ul>
+<li>Quando você chama uma função sem nenhum argumento, esse parâmetro padrão sera rodado no lugar.</li>
+<li>Você pode retornar o valor de uma função para armazenar em uma variável.</li>
+</ul>
+<h2 id="mcetoc_1eut7c8li6">Exemplo</h2>
+<pre class="language-python"><code>def funcao(pais = 'Brasil'):
+    return pais
+
+argentina = funcao('Argentina')
+brasil = funcao()
+chile = funcao('Chile')
+
+print(argentina, brasil, chile)
+
+# Retorno
+
+&gt; Argentina Brasil Chile</code></pre>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>

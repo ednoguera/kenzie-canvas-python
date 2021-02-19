@@ -2,6 +2,7 @@ import { Form, Input, Button, Menu, Item } from 'antd'
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import { color } from '../pages/lives/'
 import styled from 'styled-components'
+import img from '../assets/img/bkg-sidebar.jpg'
 
 const Image = styled.img`
     height: 32vmin;

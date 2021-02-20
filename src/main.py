@@ -68,21 +68,25 @@ def jsonfile_reader():
     # NEED TO PUT ARGS IN IT, COWBOY!!!!
     ...
 
-def process_learnin_resources(range_l_r, l_rs):
-    for l_r in l_rs[range_l_r[0]:range_l_r[1]]:
+def process_learnin_resources(start, end, l_rs):
+    for l_r in l_rs[start: end]:
         create_html_page(htmlpath(l_r.get('local')), l_r.get('remote'))
 
-QTD_THREADS = 16
+QTD_THREADS = 14
 
 if __name__ == "__main__":
     with open('arquivos.csv') as f:
         l_rs = [l_r for l_r in csv.DictReader(f)]
-        split_points = list(range(0,len(l_rs), int(len(l_rs)/(QTD_THREADS - 2))))
-        mapping_points = list(zip([0] +split_points, split_points + [None]))
         
+        # calculo e produção de slices
+        qtd_thrad_process = int(len(l_rs)/(QTD_THREADS - 2))
+        split_points = list(range(0,len(l_rs), qtd_thrad_process))
+        mapping_points = list(zip([0] +split_points, split_points + [None]))
+        print(len(mapping_points), mapping_points)
         threads = []
-        for range_l_r in mapping_points:
-            x = threading.Thread(target=process_learnin_resources, args=(range_l_r,l_rs))
+
+        for start, end in mapping_points:
+            x = threading.Thread(target=process_learnin_resources, args=(start, end, l_rs))
             threads.append(x)
             x.start()
         

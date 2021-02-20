@@ -26,16 +26,16 @@ const Lives = () => {
 
 
                 <SectionDay>
-                    <p>Tenha sucesso como programador!</p>
+                    <p>Live bônus com Daniel</p>
                 </SectionDay>
                 <GroupLivesContainer>
                     <div>
                         <VideoHeader>
-                            <h3>Descubra sua grande oportunidade de carreira para 2021</h3>
+                            <h3>A oportunidade para você entrar na programação e ser disputado por grandes empresas</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/6HXeByLjrPs")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/yAhDKRwujAg")}
                     </div>
-                    <div>
+                    {/* <div>
                         <VideoHeader>
                             <h3>Segredos para você ter sucesso na programação!</h3>
                         </VideoHeader>
@@ -46,33 +46,27 @@ const Lives = () => {
                             <h3>A jornada COMPLETA para você entrar na carreira do futuro, ser disputado pelas empresas e ganhar 5x mais</h3>
                         </VideoHeader>
                         {setResponsiveVideo("https://www.youtube.com/embed/8O4z_rnqWiI")}
-                    </div>
+                    </div> */}
 
                 </GroupLivesContainer>
 
 
                 <SectionDay>
-                    <p>Dia 26</p>
+                    <p>Dia 22</p>
                 </SectionDay>
                 <GroupLivesContainer>
                     <div>
                         <VideoHeader>
-                            <h3>26/01 - Live com Hudson Carolino e Maria Porcina</h3>
+                            <h3>22/02 - Como guardar valores em variáveis e utiliza-las</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/xBDAwS49Ed0")}
-                    </div>
-                    <div>
-                        <VideoHeader>
-                            <h3>Demo com Q&A - Introdução à programação, variáveis, estruturas de decisão</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/tXNaLef4w_0")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/36rNEO8R9sw")}
                     </div>
                 </GroupLivesContainer>
 
 
                 <SectionDay>
                     <p>
-                        Dia 27
+                        Dia 23
                 </p>
                 </SectionDay>
 
@@ -81,37 +75,25 @@ const Lives = () => {
 
                     <div>
                         <VideoHeader>
-                            <h3>27/01 - Live com Hudson Carolino e Maria Porcina</h3>
+                            <h3>23/02 - Trabalhando com listas de forma fácil</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/KfJcSrCHNnM")}
-                    </div>
-                    <div>
-                        <VideoHeader>
-                            <h3>Demo com Q&A - Arrays aninhados e funções</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/4OynhSBJhuk")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/yqEIV8D0Wwk")}
                     </div>
                 </GroupLivesContainer>
 
 
                 <SectionDay>
                     <p>
-                        Dia 28
+                        Dia 24
                 </p>
                 </SectionDay>
                 <GroupLivesContainer>
 
                     <div>
                         <VideoHeader>
-                            <h3>28/01 - Live com Hudson Carolino e Maria Porcina</h3>
+                            <h3>24/02 - Funções em Python</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/aHMGhfg8jr4")}
-                    </div>
-                    <div>
-                        <VideoHeader>
-                            <h3>Arrays aninhados e funções</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/LTklhUyDHgw")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/Dr4jfOasmMs")}
                     </div>
 
                 </GroupLivesContainer >
@@ -119,30 +101,30 @@ const Lives = () => {
 
                 <SectionDay>
                     <p>
-                        Dia 29
+                        Dia 25
                 </p>
                 </SectionDay>
                 <GroupLivesContainer>
                     <div>
                         <VideoHeader>
-                            <h3>10 passos para ter um perfil atraente no Linkedin</h3>
+                            <h3>25/02 - Funções em Python</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/DQsNx4hhKLA")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/5o4Jqzn52e8")}
                     </div>
+                </GroupLivesContainer>
 
+                <SectionDay>
+                    <p>
+                        Dia 26
+                </p>
+                </SectionDay>
+                <GroupLivesContainer>
                     <div>
                         <VideoHeader>
-                            <h3>29/01 - Live com Hudson Carolino e Maria Porcina</h3>
+                            <h3>25/02 - Processar dados de um arquivo csv</h3>
                         </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/4nXBiG9ZYM0")}
+                        {setResponsiveVideo("https://www.youtube.com/embed/4-lbCAdW7s4")}
                     </div>
-                    <div>
-                        <VideoHeader>
-                            <h3>Demo com Q&A - Introdução a objetos (como arrays associativos ou dicionários)</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/Y8x0HHaWy2s")}
-                    </div>
-
                 </GroupLivesContainer>
 
             </PageLivesContainer>

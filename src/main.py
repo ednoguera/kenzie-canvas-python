@@ -96,6 +96,6 @@ if __name__ == "__main__":
             print(f"Main    : thread {index} done")
 
     os.system('git pull')
-    os.system('git add src/main.py')
+    os.system('git add public/pages')
     os.system('git commit -m "fix: adding/updating learning resources"')
     os.system('git push')

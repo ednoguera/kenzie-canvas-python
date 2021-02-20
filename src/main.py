@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import csv
 import threading
 import logging
-
+import os
 
 def url_generator(path):
     return f"https://npepa32v9l.execute-api.us-east-1.amazonaws.com/v2/?project_id=19989138&filename=python/zero-ao-python/{path}&ref=master"
@@ -95,3 +95,7 @@ if __name__ == "__main__":
             thread.join()
             print(f"Main    : thread {index} done")
 
+    os.system('git pull')
+    os.system('git add src/main.py')
+    os.system('git commit -m "fix: adding/updating learning resources"')
+    os.system('git push')

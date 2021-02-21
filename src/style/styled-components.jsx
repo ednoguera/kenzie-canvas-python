@@ -303,11 +303,12 @@ const HeaderTitleContainer = styled.div`
     color: #05143c;
     font-size: 15px;
     font-weight: bold;
-    padding-top: 15px;
-    font-family: 'Montserrat', sans-serif;
 
     @media (min-width: 320px) and (max-width: 1024px) {
-        padding: 0 0 1% 20%;
+      display: flex;
+      justify-content: flex-end;
+      width: inherit;
+      padding-right: 1rem;
 
         h1 {
             color: #fff;

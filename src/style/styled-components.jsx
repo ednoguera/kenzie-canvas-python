@@ -908,8 +908,16 @@ const StyledHtmlContent = styled.div`
 
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         margin: 2rem;
+      
+      iframe {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
 
         p {
             width: 700px;

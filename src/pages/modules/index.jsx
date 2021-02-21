@@ -22,13 +22,12 @@ const Modules = (props) => {
     const { width } = useWindowSize()
 
     const fetchContent = () => {
+        //Set default lesson to the state.
         fetch("/pages/00-instrucoes.html")
             .then(res => res.text())
             .then(html =>
                 setBaseContent(html)
             )
-        console.log(baseContent)
-
     }
 
     const renderLives = () => {

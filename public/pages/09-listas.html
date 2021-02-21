@@ -1,0 +1,177 @@
+<div class="mce-toc">
+<h2>Table of Contents</h2>
+<ul>
+<li> </li>
+<li><a href="#mcetoc_1ev35q47u0">Olá, futuros desenvolvedores. Nessa lição vocês aprenderão um pouco mais sobre as listas e os seus métodos, é muito importante que vocês repliquem todos os exemplos para que possa ser fixado adequadamente.</a></li>
+<li><a href="#mcetoc_1epr445lq1ar">Dia 2: Listas e métodos de lista</a>
+<ul>
+<li><a href="#mcetoc_1esrnepe5s">Criando uma Lista</a></li>
+<li><a href="#mcetoc_1esrnepe5t">Acessando os Itens de uma Lista</a></li>
+<li><a href="#mcetoc_1esrnepe5u">Removendo os Itens de uma Lista</a></li>
+<li><a href="#mcetoc_1epr445lq1at">Métodos da Lista</a></li>
+<li> </li>
+<li><a href="#mcetoc_1esrntauv16">Criando cópias de listas</a></li>
+<li> </li>
+<li><a href="#mcetoc_1epr445lq1au">Ordenando Listas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 class="page-title" id="mcetoc_1ev32oone3" style="font-family: sans-serif;"></h1>
+<p> </p>
+<p style="text-align: left;"><strong><span style="font-size: 14pt;">Olá, futuros desenvolvedores. Nessa lição vocês aprenderão um pouco mais sobre as listas e os seus métodos, é muito importante que vocês repliquem todos os exemplos para que possa ser fixado adequadamente.</span></strong></p>
+<p> </p>
+<h1 id="mcetoc_1epr445lq1ar">Dia 2: Listas e métodos de lista</h1>
+<p>As listas são um dos tipos de dados de sequência do Python e são úteis para armazenar dados relacionados em grupos usando apenas um nome. Elas são muito versáteis, permitindo armazenar dados de qualquer tipo dentro delas. Você irá usá-las o tempo todo. Aqui estão algumas características das listas.</p>
+<ul>
+<li>Elas são mutáveis - podem ser modificadas diretamente após a criação sem criar um novo objeto;</li>
+<li>São sequenciais - seus conteúdos são ordenados e podem ser acessados através de sua posição dentro da sequência.</li>
+</ul>
+<p> </p>
+<h2 id="mcetoc_1esrnepe5s">Criando uma Lista</h2>
+<p>Como é o caso de alguns outros tipos de dados, há mais de uma maneira de criar uma lista: a sintaxe literal [] e a função incorporada list().</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; ["a", "b", "c"]
+['a', 'b', 'c']
+&gt;&gt;&gt; list("abc")
+['a', 'b', 'c']</code></pre>
+<p>As duas linhas de código acima resultam na mesma lista. A diferença é que a função list() leva um iterável(um objeto em que pode ser feito um loop sobre) como argumento e popula a lista resultante com cada um dos valores do iterável. No exemplo acima, "abc" é uma string, que é iterável, e retorna um caractere por vez quando é iterada.</p>
+<p> </p>
+<h2 id="mcetoc_1esrnepe5t">Acessando os Itens de uma Lista</h2>
+<p>Assim como as strings, as listas podem ser indexadas e fatiadas. Isso possível devido à sua característica sequencial.</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+&gt;&gt;&gt; my_list[0]
+1
+&gt;&gt;&gt; my_list[-2]
+9
+&gt;&gt;&gt; my_list[5:]
+[6, 7, 8, 9, 10]</code></pre>
+<p> </p>
+<h2 id="mcetoc_1esrnepe5u">Removendo os Itens de uma Lista</h2>
+<p>Isso mesmo! Há várias maneiras de fazer isso. Você será apresentado a alguns métodos na seção seguinte, mas aqui estão algumas maneiras de fazer isso com palavras-chave Python e fatiamento.</p>
+<pre> </pre>
+<p>A remoção de fatias de uma lista permite que você remova pedaços de uma só vez. Basta atribuir um iterável falso (e.g., "", (), [], {}) e toda a fatia é então removida da lista. É comum usar um literal de string vazia, "". Lembre-se, o fim da fatia não é incluído na própria fatia (ou seja, my_list[2:5] inclui os índices 2, 3 e 4, mas não o índice 5).</p>
+<p> </p>
+<h2 id="mcetoc_1epr445lq1at">Métodos da Lista</h2>
+<p>Os métodos de lista incorporados permitem que você efetue operações em uma lista. Observe como alguns deles modificam a lista localmente, sem retornar uma nova lista. Isso se deve à característica da lista de ser mutável. Às vezes, isso pode ser uma surpresa se você estiver esperando uma lista como um valor de retorno, já que algumas delas retornam um tipo Nenhum.</p>
+<p> </p>
+<p>append() - adiciona um item ao fim de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2]
+&gt;&gt;&gt; my_list.append(3)
+&gt;&gt;&gt; my_list
+[1, 2, 3]</code></pre>
+<p>clear() - remove todos os itens de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2]
+&gt;&gt;&gt; my_list
+[1, 2]
+&gt;&gt;&gt; my_list.clear()
+&gt;&gt;&gt; my_list
+[]</code></pre>
+<h2 id="mcetoc_1ev32oonf4"></h2>
+<h2 id="mcetoc_1esrntauv16">Criando cópias de listas</h2>
+<p>copy() - retorna uma cópia de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list1 = [1, 2, 3]
+&gt;&gt;&gt; my_list2 = my_list1.copy()
+&gt;&gt;&gt; my_list2
+[1, 2, 3]
+&gt;&gt;&gt; id(my_list1), id(my_list2) # not the same object
+(4305012544, 4305012608)</code></pre>
+<p>É importante observe que isso produz uma cópia rasa de my_list1. Isso afetará a forma como as alterações dos itens da lista são tratadas.</p>
+<p> </p>
+<p>count() - conta o número de ocorrências de um valor a partir de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3, 2, 1]
+&gt;&gt;&gt; my_list.count(3)
+1
+&gt;&gt;&gt; my_list.count(2)
+2
+</code></pre>
+<p>extend() - adiciona itens de um iterável ao final de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3]
+&gt;&gt;&gt; my_list.extend([4, 5, 6])
+&gt;&gt;&gt; my_list
+[1, 2, 3, 4, 5, 6]</code></pre>
+<ul>
+<li>
+<p>Pode ser fácil confundir extend() com append(), uma vez que ambos adicionam algo ao final de uma lista. Tente lembrar-se que o append() adiciona o objeto inteiro à lista…</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1]
+&gt;&gt;&gt; my_list.append([2, 3])
+&gt;&gt;&gt; my_list
+[1, [2, 3]]</code></pre>
+<p>…mas o extend() adiciona cada item de um iterável.</p>
+</li>
+</ul>
+<ul>
+<li>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1]
+&gt;&gt;&gt; my_list.extend([2, 3])
+&gt;&gt;&gt; my_list
+[1, 2, 3]</code></pre>
+</li>
+</ul>
+<p>index() - obtém o índice da primeira ocorrência de um valor em uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3, 2, 1]
+&gt;&gt;&gt; my_list.index(2)
+1</code></pre>
+<p>Veja você mesmo o que acontece quando o valor que você está procurando não está na lista. Mais adiante nesse curso, discutiremos como lidar apropriadamente com as exceções.</p>
+<p>insert() - adiciona um item em qualquer posição de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 3]
+&gt;&gt;&gt; my_list.insert(1, 2)
+&gt;&gt;&gt; my_list
+[1, 2, 3]</code></pre>
+<p>pop() - remove o último(se não for passado parâmetro) e/ou retorna um item de qualquer posição de uma lista(caso o parâmetro seja informado)</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3]
+&gt;&gt;&gt; my_list.pop()
+3
+&gt;&gt;&gt; my_list.pop(0)
+1
+&gt;&gt;&gt; my_list
+[2]</code></pre>
+<p>Observe que, sem argumentos, o pop() remove e retorna o último item da lista. A palavra "pop" é parte da terminologia utilizada ao se discutir estruturas de dados como pilhas, o que veremos em breve.</p>
+<p>remove() - remove a primeira ocorrência de um valor de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 3, 2, 3]
+&gt;&gt;&gt; my_list.remove(3)
+&gt;&gt;&gt; my_list
+[1, 2, 3]</code></pre>
+<p>reverse() - inverte a ordem dos itens de uma lista</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3]
+&gt;&gt;&gt; my_list.reverse()
+&gt;&gt;&gt; my_list
+[3, 2, 1]</code></pre>
+<h2 id="mcetoc_1ev32oonf5"></h2>
+<h2 id="mcetoc_1epr445lq1au">Ordenando Listas</h2>
+<p>sorted() - ordena os itens de um iterável e os retorna em forma de lista</p>
+<p>list.sort() - ordena os itens de uma lista in loco</p>
+<p>Os itens da lista podem ser ordenados usando a função incorporada do Python sorted(), ou o método sort() de um objeto de lista. A diferença é que sort() é um método em um objeto de lista que ordena a lista in loco…</p>
+<p> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [3, 2, 1]
+&gt;&gt;&gt; my_list.sort()
+&gt;&gt;&gt; my_list
+[1, 2, 3]</code></pre>
+<p>…já a função incorporada sorted() pega um iterável e retorna uma lista de seus itens ordenados.</p>
+<p> </p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [3, 2, 1]
+&gt;&gt;&gt; my_list_sorted = sorted(my_list)
+&gt;&gt;&gt; my_list_sorted
+[1, 2, 3]</code></pre>
+<p>Ambos permitem algum tipo de personalização na forma como a lista é ordenada ao usar um par de argumentos de palavra-chave.</p>
+<p>key - uma função que será aplicada a cada item, e terá seu resultado usado como o valor de ordenação</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = ["hello", "hi", "greetings", "hey"]
+&gt;&gt;&gt; my_list.sort(key=len)
+&gt;&gt;&gt; my_list
+['hi', 'hey', 'hello', 'greetings']</code></pre>
+<p>reverse - um indicador booleano para indicar a direção da ordenação</p>
+<pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>&gt;&gt;&gt; my_list = [1, 2, 3]
+&gt;&gt;&gt; my_list.sort(reverse=True)
+&gt;&gt;&gt; my_list
+[3, 2, 1]</code></pre>
+<p> </p>
+<p>Essa foi a nossa lição sobre listas, agora para fixar esses conceitos, você deve praticar, preparamos uma atividade especial para vocês!</p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>

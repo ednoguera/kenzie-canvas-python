@@ -729,10 +729,20 @@ const StyledHtmlContent = styled.div`
     width: 60%;
     margin: 0 0 0 30%;
     text-align: left;
+    
+    
 
     @media (min-width: 320px) and (max-width: 374px) {
         width: 295px;
         margin: 1rem auto;
+
+      iframe {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
 
         p {
             width: 300px;
@@ -785,6 +795,14 @@ const StyledHtmlContent = styled.div`
         width: 360px;
         margin: 1rem auto;
 
+      iframe {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
+
         p {
             width: 360px;
             padding-left: 0 !important;
@@ -833,8 +851,15 @@ const StyledHtmlContent = styled.div`
     }
 
     @media (min-width: 425px) and (max-width: 767px) {
-        width: 390px;
-        margin: 1rem auto;
+        margin: 2rem;
+
+      iframe {
+        display: none;
+      }
+
+      img {
+        display: none;
+      }
 
         p {
             width: 390px;
@@ -883,25 +908,32 @@ const StyledHtmlContent = styled.div`
 
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-        width: 390px;
-        margin: 1rem auto;
+    @media (min-width: 768px) and (max-width: 1023px) {
+        margin: 2rem;
+      
+      iframe {
+        display: none;
+      }
 
-                p {
-            width: 390px;
+      img {
+        display: none;
+      }
+
+        p {
+            width: 700px;
             padding-left: 0 !important;
         }
 
         pre {
-            width: 390px;
+            width: 700px;
         }
 
         img {
-            width: 390px;
+            width: 700px;
         }
 
         div {
-            width: 390px;
+            width: 700px;
         }
 
         ul {
@@ -909,23 +941,27 @@ const StyledHtmlContent = styled.div`
         }
 
         li {
-            width: 390px;
+            width: 700px;
             list-style-type: none;
             margin: 0;
         }
 
         table {
-            width: 390px;
+            width: 700px;
             border: none;
+        }
+        
+        tbody {
+          display: none;
         }
 
         td {
-            width: 390px;
+            width: 700px;
             padding: 0px !important;
         }
 
         h3{
-            width: 390px;
+            width: 700px;
         }
 
     }

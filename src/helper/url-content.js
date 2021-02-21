@@ -1,1 +1,18 @@
-export const base_url = "https://npepa32v9l.execute-api.us-east-1.amazonaws.com/v2/?project_id=15923698&filename=js-01-programming.md&ref=master"
+import React, {useState} from 'react'
+
+const Instructions = props => {
+    const [lesson00, setLesson00] = useState()
+
+    const FetchContent = () => {
+
+    }
+
+
+    return (
+        <div></div>
+    )
+}
+
+export const base_url = "/pages/00-instrucoes.html"
+
+

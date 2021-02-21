@@ -3,11 +3,10 @@ import SideBarModules from '../../components/side-bar_modules'
 import Header from '../../components/header_modules/'
 import SideBarLessons from '../../components/side-bar-lessons_modules/'
 import Content from '../../components/render-content_modules/'
-import { lessons } from '../../helper/lesson_array'
-import Instructions from '../../components/00-first-lesson_modules/'
 import styled from 'styled-components'
 import Lives from '../../components/render-lives_modules/'
 import { useWindowSize } from '../../helper/window-size-hook'
+import {StyledHtmlContent} from "../../style/styled-components";
 
 const Modules = (props) => {
     const [menuModules, setMenuModules] = useState(true)
@@ -18,9 +17,19 @@ const Modules = (props) => {
     const [lessonTitle, setLessonTitle] = useState(
         localStorage.getItem("storedTitle") === null ? "Aula 1" : localStorage.getItem("storedTitle")
     )
+    const [baseContent, setBaseContent] = useState()
 
     const { width } = useWindowSize()
 
+    const fetchContent = () => {
+        fetch("/pages/00-instrucoes.html")
+            .then(res => res.text())
+            .then(html =>
+                setBaseContent(html)
+            )
+        console.log(baseContent)
+
+    }
 
     const renderLives = () => {
         setselectedLesson("lives")
@@ -30,13 +39,15 @@ const Modules = (props) => {
         }
     }
 
+    fetchContent()
+
     return (
         <div >
             <SideBarModules />
             <Header setMenuModules={setMenuModules} menuModules={menuModules} width={width} />
             <PageContainer>
                 {menuModules === true ? <SideBarLessons setState={setselectedLesson} setLessonTitle={setLessonTitle} renderLives={renderLives} setMenuModules={setMenuModules} width={width} /> : null}
-                {selectedLesson === null ? <Instructions /> : selectedLesson === "lives" ? <Lives /> : <Content selectedLesson={selectedLesson} title={lessonTitle} />}
+                {selectedLesson === null ? <StyledHtmlContent dangerouslySetInnerHTML={{ __html: baseContent }} /> : selectedLesson === "lives" ? <Lives /> : <Content selectedLesson={selectedLesson} title={lessonTitle} />}
             </PageContainer>
         </div>
     )

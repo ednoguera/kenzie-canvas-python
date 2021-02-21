@@ -43,7 +43,7 @@ const Header = (props) => {
 export default Header
 
 const LogoMobile = styled.img`
-    height: 20vmin;
+  height: 12vmin;
 `
 
 const LogoFull = styled.img`

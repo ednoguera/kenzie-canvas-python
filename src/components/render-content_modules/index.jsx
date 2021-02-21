@@ -19,7 +19,6 @@ const Content = (props) => {
     return (
         <div>
             <div>
-                {/* {fetchedContent !== undefined ? <IframeRender src={props.selectLesson} title={props.title} /> : null} */}
                 {fetchedContent !== undefined ? <StyledHtmlContent dangerouslySetInnerHTML={{ __html: content }} /> : null}
             </div>
         </div>

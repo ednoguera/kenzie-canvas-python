@@ -24,3 +24,4 @@ yarn-error.log*
 venv
 .idea
 **/*.swp
+.eslintcache

@@ -23,34 +23,6 @@ const Lives = () => {
             </LivesTitle>
 
             <PageLivesContainer>
-
-
-                <SectionDay>
-                    <p>Live bônus com Daniel</p>
-                </SectionDay>
-                <GroupLivesContainer>
-                    <div>
-                        <VideoHeader>
-                            <h3>A oportunidade para você entrar na programação e ser disputado por grandes empresas</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/yAhDKRwujAg")}
-                    </div>
-                    {/* <div>
-                        <VideoHeader>
-                            <h3>Segredos para você ter sucesso na programação!</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/QOoW3evXhSM")}
-                    </div>
-                    <div>
-                        <VideoHeader>
-                            <h3>A jornada COMPLETA para você entrar na carreira do futuro, ser disputado pelas empresas e ganhar 5x mais</h3>
-                        </VideoHeader>
-                        {setResponsiveVideo("https://www.youtube.com/embed/8O4z_rnqWiI")}
-                    </div> */}
-
-                </GroupLivesContainer>
-
-
                 <SectionDay>
                     <p>Dia 22</p>
                 </SectionDay>
@@ -125,6 +97,31 @@ const Lives = () => {
                         </VideoHeader>
                         {setResponsiveVideo("https://www.youtube.com/embed/4-lbCAdW7s4")}
                     </div>
+                </GroupLivesContainer>
+
+                <SectionDay>
+                    <p>Live bônus com Daniel</p>
+                </SectionDay>
+                <GroupLivesContainer>
+                    <div>
+                        <VideoHeader>
+                            <h3>A oportunidade para você entrar na programação e ser disputado por grandes empresas</h3>
+                        </VideoHeader>
+                        {setResponsiveVideo("https://www.youtube.com/embed/yAhDKRwujAg")}
+                    </div>
+                    {/* <div>
+                        <VideoHeader>
+                            <h3>Segredos para você ter sucesso na programação!</h3>
+                        </VideoHeader>
+                        {setResponsiveVideo("https://www.youtube.com/embed/QOoW3evXhSM")}
+                    </div>
+                    <div>
+                        <VideoHeader>
+                            <h3>A jornada COMPLETA para você entrar na carreira do futuro, ser disputado pelas empresas e ganhar 5x mais</h3>
+                        </VideoHeader>
+                        {setResponsiveVideo("https://www.youtube.com/embed/8O4z_rnqWiI")}
+                    </div> */}
+
                 </GroupLivesContainer>
 
             </PageLivesContainer>

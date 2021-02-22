@@ -122,7 +122,7 @@ export const lessons = [
             },
             {
                 "module": "Fundamentos de programação com Python",
-                "lessonName": "10 - Tuplas",
+                "lessonName": "10 - Prática de Listas",
                 "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/267",
                 "iframeUrl": "/pages/10-pratica-listas.html",
                 "fileName": ""
@@ -131,7 +131,7 @@ export const lessons = [
         "issuesList": [
             {
                 "module": "Fundamentos de programação com Python",
-                "lessonName": "11 - Prática - Listas",
+                "lessonName": "11 - Tuplas",
                 "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/270",
                 "iframeUrl": "/pages/11-tuplas.html",
                 "fileName": ""
@@ -267,21 +267,14 @@ export const lessons = [
         "issuesList": [
             {
                 "module": "Fundamentos de programação com Python",
-                "lessonName": "24 - Prática - O que é um arquivo CSV",
-                "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/288",
-                "iframeUrl": "/pages/24-pratica-csv.html",
-                "fileName": ""
-            },
-            {
-                "module": "Fundamentos de programação com Python",
-                "lessonName": "25 - Prática - Processando arquivos CSV com Python",
+                "lessonName": "24 - Prática - Processando arquivos CSV com Python",
                 "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/289",
                 "iframeUrl": "/pages/25-pratica-processando-csv.html",
                 "fileName": ""
             },
             {
                 "module": "Fundamentos de programação com Python",
-                "lessonName": "26 - Prática - Criação de gráficos com matplotlib",
+                "lessonName": "25 - Prática - Criação de gráficos com matplotlib",
                 "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/290",
                 "iframeUrl": "/pages/26-pratica-criacao-graficos.html",
                 "fileName": ""

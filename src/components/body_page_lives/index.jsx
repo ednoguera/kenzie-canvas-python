@@ -33,45 +33,45 @@ const VideoSection = (props) => {
 
                 {responsiveIframe(props.urlVideo1)}
             </ContentContainer>
-            <div>
-                <div>
-                    <div>
-                        <p>{props.date2}</p>
-                    </div>
-                    <div>
-                        <h3>{props.title2}</h3>
-                    </div>
-                </div>
+            {/*<div>*/}
+            {/*    <div>*/}
+            {/*        <div>*/}
+            {/*            <p>{props.date2}</p>*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <h3>{props.title2}</h3>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                {responsiveIframe(props.urlVideo2)}
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <p>{props.date3}</p>
-                    </div>
-                    <div>
-                        <h3>{props.title3}</h3>
-                    </div>
-                </div>
+            {/*    {responsiveIframe(props.urlVideo2)}*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*    <div>*/}
+            {/*        <div>*/}
+            {/*            <p>{props.date3}</p>*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <h3>{props.title3}</h3>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                {responsiveIframe(props.urlVideo3)}
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <p>{props.date4}</p>
-                    </div>
-                    <div>
-                        {props.bonus === "Live Bônus" ? <h4>{props.bonus}</h4> : null}
-                    </div>
-                    <div>
-                        <h3>{props.title4}</h3>
-                    </div>
-                </div>
+            {/*    {responsiveIframe(props.urlVideo3)}*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*    <div>*/}
+            {/*        <div>*/}
+            {/*            <p>{props.date4}</p>*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            {props.bonus === "Live Bônus" ? <h4>{props.bonus}</h4> : null}*/}
+            {/*        </div>*/}
+            {/*        <div>*/}
+            {/*            <h3>{props.title4}</h3>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                {responsiveIframe(props.urlVideo4)}
-            </div>
+            {/*    {responsiveIframe(props.urlVideo4)}*/}
+            {/*</div>*/}
         </BackgroundSection>
     )
 }

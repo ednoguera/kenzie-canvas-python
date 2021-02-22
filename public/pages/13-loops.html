@@ -1,25 +1,22 @@
-<h1 class="page-title" id="mcetoc_1epr5i8hu1ui" style="color: #000000; font-family: sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></h1>
-<div class="mce-toc" style="border: 1px solid gray; color: #000000; font-family: sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<div class="mce-toc">
 <h2>Table of Contents</h2>
 <ul>
-<li> </li>
-<li><a href="#mcetoc_1euqqp1f00">Dia 2: Loops</a>
+<li><a href="#mcetoc_1ev5t4b4t3">Loops</a>
 <ul>
-<li><a href="#mcetoc_1euqqp1f01">Loops</a>
+<li><a href="#mcetoc_1epr5i8hu1uo">for…in</a>
 <ul>
-<li><a href="#mcetoc_1epr5i8hu1uo">for…in</a></li>
 <li><a href="#mcetoc_1epr5i8hu1up">Melhores Amigos para Sempre</a></li>
+</ul>
+</li>
 <li><a href="#mcetoc_1epr5i8hu1uq">while</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </div>
-<h1 id="mcetoc_1euqqp1f00">Loops</h1>
-<p>Olá, desenvolvedores! O nosso conteúdo do dia englobará algumas das estruturas fundamentais do Python, os nossos loops. Esperamos que vocês possam tirar o máximo possível de proveito do conteúdo que estamos disponibilizando, não esqueçam de praticar bastante para fixar bem.<br/><br/><br/></p>
-<h2 id="mcetoc_1euqqp1f01" style="text-align: left;">Loops</h2>
-<h3 id="mcetoc_1epr5i8hu1uo" style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">for…in</span></h3>
+<p> </p>
+<h1 id="mcetoc_1ev5t4b4t3">Loops</h1>
+<p>Olá, desenvolvedores! O nosso conteúdo do dia englobará algumas das estruturas fundamentais do Python, os nossos loops. Esperamos que vocês possam tirar o máximo possível de proveito do conteúdo que estamos disponibilizando, não esqueçam de praticar bastante para fixar bem.<br/><br/></p>
+<h2 id="mcetoc_1epr5i8hu1uo" style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">for…in</span></h2>
 <p style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">O Python não remove e tem loops <em style="margin-top: 0px;">for</em> no sentido tradicional. Ele tem apenas loops <em>for...in</em>, o qual chamaremos de loop <em>for</em>. O loop <em>for</em> do Python pega um iterável e retorna cada item dele, um por vez, até que todos os itens tenham sido iterados ou o loop tenha terminado. Ele funciona no estilo <em>iteração</em> e <em style="margin-bottom: 0px;">iterável</em>, que veremos mais detalhadamente numa aula futura.</span></p>
 <p><span style="background-color: #ffffff; font-family: helvetica, arial, sans-serif;">No exemplo a seguir, <span data-darkreader-inline-bgcolor="" style="margin-top: 0px; background-color: #ecf0f1;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: terminal, monaco, monospace; color: #ba372a; background-color: #ced4d9;">carrinho_compras</span> </span><span data-darkreader-inline-bgcolor="" style="background-color: #e8e8e8;"><span data-darkreader-inline-bgcolor="" style="margin-top: 0px; margin-bottom: 0px; background-color: #ffffff;"> é uma lista de itens de compra</span></span> . Dentro do loop <em style="margin-bottom: 0px;">for</em>, você tem acesso à iteração atual do </span><span style="color: #ba372a; background-color: #ced4d9; font-family: terminal, monaco, monospace;">item</span><span style="background-color: #ffffff; font-family: helvetica, arial, sans-serif;"> a cada passagem pelo loop.</span></p>
 <pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>for item in carrinho_compras:
@@ -93,7 +90,7 @@ print(found)</code></pre>
 </tbody>
 </table>
 <p style="font-family: sans-serif; background-color: #ffffff;"> </p>
-<h3 id="mcetoc_1epr5i8hu1uq" style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">while</span></h3>
+<h2 id="mcetoc_1epr5i8hu1uq" style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">while</span></h2>
 <p style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">O loop <em style="margin-top: 0px;">while</em> é usado quando você quer continuar fazendo algo enquanto uma condição é verdadeira ou até que o loop seja encerrado manualmente. A sintaxe para isso é a palavra-chave <code style="margin-bottom: 0px;">while</code>, seguida por uma expressão que resulta em Verdadeiro ou Falso.</span></p>
 <pre class="language-python" style="color: #657b83; background-color: #fdf6e3; text-shadow: white 0px 1px; font-size: medium; word-spacing: 0px; border-radius: 0.3em;"><code>countdown = 3
 while countdown &gt; 0:
@@ -117,6 +114,36 @@ while choice != 1:
         print("You seek Yoda.\n")</code></pre>
 <p style="font-family: sans-serif; background-color: #ffffff;"> </p>
 <p style="font-family: sans-serif; background-color: #ffffff;"><span style="margin-top: 0px; margin-bottom: 0px; font-family: helvetica, arial, sans-serif;">Muitas vezes, você vai precisar identificar se o que você precisar é um loop <em style="margin-top: 0px;">for</em> ou um loop <em style="margin-bottom: 0px;">while</em>, e muitas vezes qualquer um dos dois servirá. Entretanto, normalmente um é mais adequado do que o outro para resolver um problema específico, e rapidamente se tornará claro qual deles torna o trabalho mais fácil em cada situação.<br/><br/>Esperamos que você tenha aproveitado ao máximo o nosso conteúdo de loops. Conte conosco para o que precisar! <br/><br/><br/></span><code class="language-python" style="color: #657b83; background-image: none; background-position: initial; text-shadow: white 0px 1px;"></code></p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
+<p> </p>
 <p> </p>
 
 <p> </p>

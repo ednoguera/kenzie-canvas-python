@@ -1,80 +1,107 @@
 <div class="mce-toc">
 <h2>Table of Contents</h2>
 <ul>
-<li><a href="#mcetoc_1eut9ma2sop">Hora da Prática!</a>
+<li>
 <ul>
-<li><a href="#mcetoc_1eut9ma2soq">Exercício 1</a></li>
-<li><a href="#mcetoc_1eut9ma2sor">Exercício 2</a></li>
-<li><a href="#mcetoc_1eut9ma2sos">Exercício 3</a></li>
+<li> </li>
+<li><a href="#mcetoc_1ehqfr33ic">Processando um arquivo CSV</a>
+<ul>
+<li><a href="#mcetoc_1ehqfr33id">Lendo um arquivo CSV</a></li>
+<li><a href="#mcetoc_1ehqfr33ie">Escrevendo em arquivo CSV</a></li>
+</ul>
+</li>
+<li> </li>
+</ul>
+</li>
+<li><a href="#mcetoc_1ehqfr33if">Resources:</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1ev4nc28g1"></h2>
+<h1 id="mcetoc_1ehqfr33ic">Processando um arquivo CSV</h1>
+<p>E aqui, mais uma vez o Python nos trás uma funcionalidade, o módulo <span data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" style="color: #ba372a; background-color: #ced4d9;">csv</span> que é um <em>built-in</em>, que nos possibilita realizar operações com arquivos CSV</p>
+<h2 id="mcetoc_1ehqfr33id">Lendo um arquivo CSV</h2>
+<p>Para fazer esta leitura vamos instruir a máquina a fazer o seguinte</p>
+<ul>
+<li>importar o módulo csv</li>
+<li>abrir o arquivo csv em modo de leitura</li>
+<li>criar um leitor de csv, que é um iterador sobre o arquivo</li>
+<li>iterar sobre as linhas para obtermos os dados</li>
+<li>fechar o arquivo csv</li>
+</ul>
+<p>Nosso código equivalente é o seguinte</p>
+<pre class="language-python"><code>import csv
+
+with open('paes.csv', 'r') as paes_csv:
+    reader = csv.DictReader(paes_csv)
+    for dic in reader:
+        print(dic)
+</code></pre>
+<p>A saída (output) será a seguinte</p>
+<pre class="language-ruby"><code>{'id_produto': '1', 'descricao': 'Pão de Queijo', 'valor': '1.00', 'desconto': '0.0'}
+{'id_produto': '2', 'descricao': 'Pão de Forma', 'valor': '6.00', 'desconto': '0.4'}
+{'id_produto': '3', 'descricao': 'Pão de Milho', 'valor': '0.70', 'desconto': '0.0'}
+{'id_produto': '4', 'descricao': 'Pão de Mel', 'valor': '2.50', 'desconto': '0.3'}
+</code></pre>
+<h3 id="mcetoc_1ehqfr33ie">Escrevendo em arquivo CSV</h3>
+<p>Para incluir um novo registro no nosso CSV de pães vamos ler o nosso arquivo csv utilizando o DictReader e então adicionar um novo elemento a lista e então adicioná-la no fim do arquivo, instruindo a máquina a fazer o seguinte:</p>
+<ul>
+<li>importar o módulo csv</li>
+<li>abrir o arquivo em modo leitura</li>
+<li>criar um escritor de csv
+<ul>
+<li>definir o caractere de delimitador</li>
+<li>definir o caractere fieldnames</li>
+</ul>
+</li>
+<li>criar uma lista com os dados para serem colocados na linha</li>
+<li>passar a lista para o escritor adicioná-la no fim do arquivo csv</li>
+<li>fechar o arquivo csv</li>
+</ul>
+<p>Tranformando isso em código Python, temos o seguinte:</p>
+<pre class="language-python"><code>import csv
+
+# Essa função faz a leitura de todos os dicionários dentro do arquivo 'paes.csv', não precisa se preocupar, você já fez anterioremente.
+def all_products(FILENAME):
+    with open('paes.csv', 'r') as paes_csv:
+        return [dic for dic in csv.DictReader(paes_csv)]
+        
+# Aqui estamos adicionando o nosso novo dicionário na nossa lista de produtos.
+pao = {'id_produto': 5, 'descricao': 'Pão cevado', 'valor': 4.00, 'desconto': 0.0}
+all_products_list = all_products('paes.csv')
+all_products_list.append(pao)
+
+# E aqui fazemos a escrita do nosso arquivo
+with open('paes.csv', 'w') as paes_csv:
+    writer = csv.DictWriter(paes_csv, delimiter=',', fieldnames=['id_produto', 'descricao', 'valor', 'desconto'])
+    writer.writeheader()
+    for product in all_products_list:
+        writer.writerow(product)
+</code></pre>
+<p>Dessa forma teremos uma nova linha no nosso arquivo<span data-darkreader-inline-bgcolor="" style="background-color: #ced4d9;"><span data-darkreader-inline-color="" style="color: #ba372a;"> paes.csv</span>,</span> como a seguir.</p>
+<pre class="language-python"><code>id_produto,descricao,valor,desconto
+1,Pão de Queijo,1.00,0.0
+2,Pão de Forma,6.00,0.4
+3,Pão de Milho,0.70,0.0
+4,Pão de Mel,2.50,0.3
+5,Pão cevado,4.0,0.0</code></pre>
+<p> </p>
+<h1 id="mcetoc_1ehqfr33if">Resources:</h1>
+<ul>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html" rel="noopener" target="_blank">Documentação do Python</a>
+<ul>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html#csv.DictReader" rel="noopener" target="_blank">DictReader</a></li>
+<li><a href="https://docs.python.org/pt-br/3/library/csv.html#csv.DictWriter" rel="noopener" target="_blank">DictWriter</a></li>
 </ul>
 </li>
 </ul>
-</div>
-<h1 id="mcetoc_1eut9ma2sop">Hora da Prática!</h1>
-<p><span style="font-size: 14pt;">Para praticar os conceitos aprendidos sobre CSV vamos fazer alguns exercícios de processamento de CSV <span style="background-color: #ffffff; color: #333333; font-family: 'Segoe UI Emoji';">😀</span></span></p>
-<p><span style="color: #000000;"><strong><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><span style="background-color: #ffffff;">OBS:</span></span></strong></span></p>
-<ul style="font-family: sans-serif;">
-<li>Crie um arquivo chamado <span style="color: #ba372a; background-color: #ced4d9;">main.py</span></li>
-<li>Crie um arquivo CSV chamado <span style="color: #ba372a; background-color: #ced4d9;">characters.csv</span></li>
-<li>Os fieldnames para o arquivo CSV que será utilizado deve ser:</li>
-</ul>
-<p style="font-family: sans-serif; padding-left: 40px;"><span style="color: #2dc26b;"><span style="color: #7e8c8d;">id,</span><span style="color: #169179;">name,</span></span><span style="color: #e67e23;">intelligence,</span><span style="color: #ba372a;">power,</span><span style="color: #843fa1;">strength,</span><span style="color: #236fa1;">agility</span></p>
-<hr/>
-<h2 id="mcetoc_1eut9ma2soq"><span style="font-size: 18pt;">Exercício 1</span></h2>
-<table border="1" style="border-collapse: collapse; width: 100%; height: 172px;">
-<tbody>
-<tr style="height: 21px;">
-<td style="width: 27.3792%; height: 21px;">Assinatura da Função</td>
-<td style="width: 70.082%; height: 21px;">read_character_list(filename)</td>
-</tr>
-<tr style="height: 151px;">
-<td style="width: 27.3792%; height: 151px;">Procedimento</td>
-<td style="width: 70.082%; height: 151px;">
-<p>Abrir o arquivo em modo de leitura;</p>
-<p>Criar um objeto leitor de <span style="color: #ba372a; background-color: #ced4d9;">CSV</span> a partir do arquivo aberto;</p>
-<p>Retornar uma lista contendo uma lista de tuplas, em que cada tupla é um registro do <span style="color: #ba372a; background-color: #ced4d9;">CSV</span>. Não incluir o cabeçalho do <span style="color: #ba372a; background-color: #ced4d9;">CSV</span>.</p>
-</td>
-</tr>
-</tbody>
-</table>
 <p> </p>
-<h2 id="mcetoc_1eut9ma2sor">Exercício 2</h2>
-<table border="1" style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 28.1279%;">Assinatura da Função</td>
-<td style="width: 69.299%;">read_specific_character(filename, character_id)</td>
-</tr>
-<tr>
-<td style="width: 28.1279%;">Procedimento</td>
-<td style="width: 69.299%;">
-<p>Abrir o arquivo em modo de leitura;</p>
-<p>Criar um objeto leitor de <span style="color: #ba372a; background-color: #ced4d9;">CSV</span> a paritr do arquivo aberto;</p>
-<p>Procurar pelo registro com <span style="color: #ba372a; background-color: #ced4d9;">id</span> idêntico ao parâmetro <span style="color: #ba372a; background-color: #ced4d9;">character_id</span> recebido;</p>
-<p>Retornar um dicionário em que as chaves são iguais ao cabeçalho do <span style="color: #ba372a; background-color: #ced4d9;">CSV</span> e os valores iguais ao registro do <span style="color: #ba372a; background-color: #ced4d9;">character</span> encontrado</p>
-</td>
-</tr>
-</tbody>
-</table>
 <p> </p>
-<h2 id="mcetoc_1eut9ma2sos">Exercício 3</h2>
-<table border="1" style="border-collapse: collapse; width: 100%; height: 188px;">
-<tbody>
-<tr style="height: 21px;">
-<td style="width: 48.6684%; height: 21px;">Assinatura da Função</td>
-<td style="width: 48.7585%; height: 21px;">create_character(filename, name, intelligence, power, strength, agility)</td>
-</tr>
-<tr style="height: 167px;">
-<td style="width: 48.6684%; height: 167px;">Procedimento</td>
-<td style="width: 48.7585%; height: 167px;">
-<p>Abrir o arquivo em <strong>modo de escrita com a flag <span style="color: #ba372a; background-color: #ced4d9;">a</span>;</strong></p>
-<p>Criar um objeto leitor de <span style="color: #ba372a; background-color: #ced4d9;">CSV</span> a paritr do arquivo aberto;</p>
-<p>Criar um <span style="color: #ba372a; background-color: #ced4d9;">id</span> para o novo registro;</p>
-<p>Adicionar uma nova linha no <span style="color: #ba372a; background-color: #ced4d9;">CSV</span> com o novo registro;</p>
-</td>
-</tr>
-</tbody>
-</table>
+
 <p> </p>
-<p style="text-align: center;"><span style="font-size: 18pt;"><strong>Boa diversão!!! <span style="background-color: #ffffff; color: #333333; font-family: 'Segoe UI Emoji'; font-size: 24pt;">😀</span></strong></span></p>
+
+<p> </p>
+<p> </p>
+
+<p> </p>
+
 <p> </p>

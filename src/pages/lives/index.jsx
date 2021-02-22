@@ -31,7 +31,7 @@ const PageLives = () => {
 
             <SectionGroup style={{ "backgroundColor": color.grey }}>
 
-                <VideoSection title="Demo com Time de ensino" date1="22/02" title1="Trabalhando com listas de forma fácil" urlVideo1="https://www.youtube.com/embed/36rNEO8R9sw" />
+                <VideoSection title="Demo com Time de ensino" date1="22/02" title1="Como guardar valores em variáveis e utiliza-las" urlVideo1="https://www.youtube.com/embed/36rNEO8R9sw" />
                 <VideoSection date1="23/02" title1="Trabalhando com listas de forma fácil" urlVideo1="https://www.youtube.com/embed/yqEIV8D0Wwk" />
                 <VideoSection date1="24/02" title1="Funções em Python" urlVideo1="https://www.youtube.com/embed/Dr4jfOasmMs" />
                 <VideoSection date1="25/02" title1="Funções em Python" urlVideo1="https://www.youtube.com/embed/5o4Jqzn52e8" />

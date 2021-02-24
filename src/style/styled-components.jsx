@@ -741,7 +741,7 @@ const StyledHtmlContent = styled.div`
       }
 
       img {
-        display: none;
+        width: 300px !important;
       }
 
         p {
@@ -800,7 +800,7 @@ const StyledHtmlContent = styled.div`
       }
 
       img {
-        display: none;
+        width: 300px;
       }
 
         p {
@@ -813,7 +813,7 @@ const StyledHtmlContent = styled.div`
         }
 
         img {
-            width: 360px;
+            width: 360px !important;
         }
 
         div {
@@ -858,7 +858,7 @@ const StyledHtmlContent = styled.div`
       }
 
       img {
-        display: none;
+        width: 400px;
       }
 
         p {
@@ -871,7 +871,7 @@ const StyledHtmlContent = styled.div`
         }
 
         img {
-            width: 390px;
+            width: 390px !important;
         }
 
         div {
@@ -916,7 +916,7 @@ const StyledHtmlContent = styled.div`
       }
 
       img {
-        display: none;
+        width: 500px !important;
       }
 
         p {
@@ -929,7 +929,7 @@ const StyledHtmlContent = styled.div`
         }
 
         img {
-            width: 700px;
+            width: 700px !important;
         }
 
         div {

@@ -19,6 +19,7 @@ const SideBarLessons = (props) => {
             <Sider mod="F" lessons={lessons} setState={props.setState} setLessonTitle={props.setLessonTitle} setMenuModules={props.setMenuModules} width={props.width} />
             <Sider mod="G" lessons={lessons} setState={props.setState} setLessonTitle={props.setLessonTitle} setMenuModules={props.setMenuModules} width={props.width} />
             <Sider mod="H" lessons={lessons} setState={props.setState} setLessonTitle={props.setLessonTitle} setMenuModules={props.setMenuModules} width={props.width} />
+            <Sider mod="o" lessons={lessons} setState={props.setState} setLessonTitle={props.setLessonTitle} setMenuModules={props.setMenuModules} width={props.width} />
             <Sider mod="I" lessons={lessons} setState={props.setState} setLessonTitle={props.setLessonTitle} setMenuModules={props.setMenuModules} width={props.width} />
         </SideBarLessonsMenu>
     )

@@ -281,4 +281,21 @@ export const lessons = [
             }
         ]
     },
+    {
+        "module": "Fundamentos de programação com Python",
+        "topicName": "Colab Noteboos",
+        "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/286",
+        "iframeUrl": "",
+        "fileName": "l_dia-8-conclusao",
+        "lessonsList": [
+            {
+                "module": "Fundamentos de programação com Python",
+                "lessonName": "Colab notebooks",
+                "lessonUrl": "https://experiencia.kenzie.com.br/courses/5/modules/items/287",
+                "iframeUrl": "/pages/colab-notebooks.html",
+                "fileName": ""
+            }
+        ],
+        "issuesList": []
+    },
 ]
